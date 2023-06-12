@@ -1,0 +1,31 @@
+{
+  "test": "Testing in english",
+  "selectLanguageTitle": "Select your language!",
+  "forgotPassword": "Forgot my password",
+
+  "insertAction": "Insert",
+  "confirmLogin":"Confirm login",
+  "confirmAction": "Confirm",
+  "registerAccount": "Register",
+  "login": "Login",
+  "invalidEmail": "Invalid Email",
+  "password": "password",
+  "waitFor": "Loading...",
+  "insertDeviceId": "Insert device ID",
+  "add":"Add",
+  "disconnect": "Disconnect" ,
+  "device": "device",
+  "view": "View",
+
+  "administrator": "administrator",
+          "patient": "patient",
+  "familiar": "familiar",
+  "healthProfessional": "health professional",
+  "institutionAdministrator": "institution administrator",
+
+  "administrators": "administrators",
+  "patients": "patients",
+  "familiars": "familiars",
+  "healthProfessionals": "health professionals",
+  "institutionAdministrators": "institution administrators"
+}
