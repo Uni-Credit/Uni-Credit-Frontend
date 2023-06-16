@@ -1,6 +1,6 @@
 import 'dart:math';
 
-import 'package:framework/shared_widgets/popups/response_popup.dart';
+import 'package:uni_credit/shared_widgets/popups/response_popup.dart';
 import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
 

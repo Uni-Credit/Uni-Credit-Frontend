@@ -1,5 +1,5 @@
-import 'package:framework/shared_widgets/graphical_item/interactive_document/responsive_image.dart';
-import 'package:framework/shared_widgets/graphical_item/interactive_document/zoom_button.dart';
+import 'package:uni_credit/shared_widgets/graphical_item/interactive_document/responsive_image.dart';
+import 'package:uni_credit/shared_widgets/graphical_item/interactive_document/zoom_button.dart';
 import 'package:flutter/cupertino.dart';
 
 enum ImageRatioRelativeTarget { width, height }

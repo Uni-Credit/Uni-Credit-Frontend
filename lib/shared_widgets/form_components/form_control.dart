@@ -1,7 +1,7 @@
 import 'dart:math';
 
 import 'package:flutter/material.dart';
-import 'package:framework/shared_widgets/card_button/icon_action_card_button.dart';
+import 'package:uni_credit/shared_widgets/card_button/icon_action_card_button.dart';
 
 import '../responsive/media_queries.dart';
 import '../base_template/go_back_button.dart';

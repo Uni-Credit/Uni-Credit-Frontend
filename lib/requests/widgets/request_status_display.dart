@@ -1,4 +1,4 @@
-import 'package:framework/requests/widgets/request_view.dart';
+import 'package:uni_credit/requests/widgets/request_view.dart';
 import 'package:flutter/material.dart';
 
 import '../../shared_widgets/popups/response_popup.dart';

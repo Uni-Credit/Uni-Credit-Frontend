@@ -1,5 +1,4 @@
 import 'package:flutter/cupertino.dart';
-import 'package:framework/atech/models/device.dart';
 
 class ListValueNotifier<T> extends ValueNotifier<List<T>> {
   List<Function(T)> onAdd = [];

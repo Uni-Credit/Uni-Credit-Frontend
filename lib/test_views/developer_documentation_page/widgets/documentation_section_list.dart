@@ -1,5 +1,5 @@
 import 'package:flutter/cupertino.dart';
-import 'package:framework/test_views/developer_documentation_page/layout/documentation_entrance_layout.dart';
+import 'package:uni_credit/test_views/developer_documentation_page/layout/documentation_entrance_layout.dart';
 
 class DocumentationSectionList extends DocumentationQuickNavigationLayout {
   const DocumentationSectionList({Key? key}) : super(key: key);

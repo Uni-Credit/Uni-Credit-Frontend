@@ -1,11 +1,11 @@
 import 'dart:math';
 
-import 'package:framework/shared_widgets/base_template/size_restriction_definition/restricted_element_definition.dart';
-import 'package:framework/shared_widgets/base_template/template_background.dart';
-import 'package:framework/shared_widgets/base_template/template_defaults.dart';
-import 'package:framework/shared_widgets/base_template/template_scaffold.dart';
+import 'package:uni_credit/shared_widgets/base_template/size_restriction_definition/restricted_element_definition.dart';
+import 'package:uni_credit/shared_widgets/base_template/template_background.dart';
+import 'package:uni_credit/shared_widgets/base_template/template_defaults.dart';
+import 'package:uni_credit/shared_widgets/base_template/template_scaffold.dart';
 import 'package:flutter/cupertino.dart';
-
+ 
 import '../../framework.dart';
 import '../listing/multi_child_scroll_view.dart';
 import '../responsive/media_queries.dart';

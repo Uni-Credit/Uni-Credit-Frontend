@@ -3,7 +3,7 @@ import 'dart:math';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-import 'package:framework/shared_widgets/form_components/validation_form_controller.dart';
+import 'package:uni_credit/shared_widgets/form_components/validation_form_controller.dart';
 
 class LinkedInputIcon extends StatefulWidget {
   final dynamic icon;

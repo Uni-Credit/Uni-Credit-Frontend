@@ -1,8 +1,8 @@
 import 'package:dropdown_button2/dropdown_button2.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:framework/shared_widgets/form_components/template_dropdown.dart';
-import 'package:framework/shared_widgets/form_components/validation_form_controller.dart';
+import 'package:uni_credit/shared_widgets/form_components/template_dropdown.dart';
+import 'package:uni_credit/shared_widgets/form_components/validation_form_controller.dart';
 
 class DropdownBuilderArgs {
   DropdownItem selectedItem;

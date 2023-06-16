@@ -1,10 +1,10 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:framework/requests/request_process.dart';
-import 'package:framework/requests/widgets/request_status_display.dart';
-import 'package:framework/shared_widgets/list_value_notifier.dart';
+import 'package:uni_credit/requests/request_process.dart';
+import 'package:uni_credit/requests/widgets/request_status_display.dart';
+import 'package:uni_credit/shared_widgets/list_value_notifier.dart';
+import 'package:uni_credit/shared_widgets/listing/view/user_search_mechanism.dart';
 
-import '../../../atech/views/user_listing/user_search_mechanism.dart';
 import '../../base_template/template_scaffold.dart';
 import '../../base_template/widgets/card_button_v1.dart';
 import 'item_selection.dart';

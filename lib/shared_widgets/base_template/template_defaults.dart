@@ -1,7 +1,6 @@
-import 'package:framework/shared_widgets/base_template/template_scaffold.dart';
+import 'package:uni_credit/shared_widgets/base_template/template_scaffold.dart';
 import 'package:flutter/cupertino.dart';
 
-import '../../atech/atech_framework_settings.dart';
 import '../responsive/media_queries.dart';
 
 abstract class AppbarDefinition {

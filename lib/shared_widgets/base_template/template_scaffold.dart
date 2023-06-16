@@ -1,13 +1,12 @@
 import 'dart:math';
-import 'package:framework/models/extensions/for_build_context.dart';
-import 'package:framework/shared_widgets/base_template/size_restriction_definition/restricted_element_definition.dart';
-import 'package:framework/shared_widgets/base_template/template_background.dart';
-import 'package:framework/shared_widgets/base_template/template_body.dart';
-import 'package:framework/shared_widgets/base_template/template_defaults.dart';
-import 'package:framework/shared_widgets/base_template/size_restriction_definition/template_restricted_element.dart';
+import 'package:uni_credit/framework.dart';
+import 'package:uni_credit/models/extensions/for_build_context.dart';
+import 'package:uni_credit/shared_widgets/base_template/size_restriction_definition/restricted_element_definition.dart';
+import 'package:uni_credit/shared_widgets/base_template/template_background.dart';
+import 'package:uni_credit/shared_widgets/base_template/template_body.dart';
+import 'package:uni_credit/shared_widgets/base_template/template_defaults.dart';
+import 'package:uni_credit/shared_widgets/base_template/size_restriction_definition/template_restricted_element.dart';
 import 'package:flutter/material.dart';
-import '../../atech/language/language_dropdown.dart';
-import '../../framework.dart';
 import '../responsive/media_queries.dart';
 import '../listing/multi_child_scroll_view.dart';
 

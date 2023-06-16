@@ -1,4 +1,4 @@
-import 'package:framework/models/extensions/basic_types/for_string.dart';
+import 'package:uni_credit/models/extensions/basic_types/for_string.dart';
 import 'package:flutter/material.dart';
 import '../card_button.dart';
 import '../item_sizes.dart';

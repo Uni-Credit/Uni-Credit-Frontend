@@ -1,5 +1,5 @@
 import 'package:flutter/cupertino.dart';
-import 'package:framework/layout_definition/layout.dart';
+import 'package:uni_credit/layout_definition/layout.dart';
 
 class DocumentationEntranceConstruction extends LayoutConstruction {
   final DocumentationQuickNavigationLayout highlightsLayout;

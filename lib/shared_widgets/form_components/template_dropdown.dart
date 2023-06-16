@@ -1,4 +1,4 @@
-import 'package:framework/shared_widgets/form_components/dropdown_field.dart';
+import 'package:uni_credit/shared_widgets/form_components/dropdown_field.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 

@@ -1,6 +1,6 @@
 import 'dart:math';
 
-import 'package:framework/shared_widgets/graphical_item/interactive_document/responsive_image.dart';
+import 'package:uni_credit/shared_widgets/graphical_item/interactive_document/responsive_image.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';

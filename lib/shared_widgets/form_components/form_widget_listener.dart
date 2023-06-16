@@ -1,5 +1,5 @@
 import 'package:flutter/cupertino.dart';
-import 'package:framework/shared_widgets/form_components/validation_form_controller.dart';
+import 'package:uni_credit/shared_widgets/form_components/validation_form_controller.dart';
 
 class FormWidgetListener extends StatefulWidget {
   final Function() builder;

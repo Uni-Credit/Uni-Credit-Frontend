@@ -1,4 +1,4 @@
-import 'package:framework/models/extensions/basic_types/for_int.dart';
+import 'package:uni_credit/models/extensions/basic_types/for_int.dart';
 
 extension DateTimeExtension on DateTime {
   String toAmericanDisplay() {

@@ -1,6 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:framework/router_controller.dart';
+import 'package:uni_credit/router_controller.dart';
 
 abstract class ApplicationInterfacer {
   void buildPage();

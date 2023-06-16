@@ -1,4 +1,4 @@
-import 'package:framework/shared_widgets/base_template/size_restriction_definition/template_restricted_element.dart';
+import 'package:uni_credit/shared_widgets/base_template/size_restriction_definition/template_restricted_element.dart';
 import 'package:flutter/cupertino.dart';
 
 class RestrictedElementDefinition {

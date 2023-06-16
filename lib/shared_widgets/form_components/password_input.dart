@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:framework/shared_widgets/form_components/validations.dart';
+import 'package:uni_credit/shared_widgets/form_components/validations.dart';
 
 import '../../../../shared_widgets/form_components/form_controller_utility.dart';
 import '../../../../shared_widgets/form_components/linked_input_icon.dart';

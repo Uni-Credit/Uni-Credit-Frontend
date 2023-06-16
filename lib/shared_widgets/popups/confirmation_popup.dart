@@ -1,7 +1,7 @@
 import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
-import 'package:framework/models/model_color.dart';
-import 'package:framework/shared_widgets/form_components/validation_form_controller.dart';
+import 'package:uni_credit/models/model_color.dart';
+import 'package:uni_credit/shared_widgets/form_components/validation_form_controller.dart';
 import '../base_template/go_back_button.dart';
 import '../base_template/widgets/card_button_v1.dart';
 import '../form_components/form_controller_utility.dart';

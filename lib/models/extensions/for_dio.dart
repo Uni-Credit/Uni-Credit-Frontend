@@ -1,5 +1,5 @@
 import 'package:dio/dio.dart';
-import 'package:framework/models/enums/http_method.dart';
+import 'package:uni_credit/models/enums/http_method.dart';
 
 extension DioExtension on Dio {
   callRequest({

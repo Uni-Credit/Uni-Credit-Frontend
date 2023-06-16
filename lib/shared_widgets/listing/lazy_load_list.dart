@@ -1,5 +1,5 @@
 import 'package:flutter/cupertino.dart';
-import 'package:framework/shared_widgets/list_value_notifier.dart';
+import 'package:uni_credit/shared_widgets/list_value_notifier.dart';
 
 import '../../requests/request_process.dart';
 import '../../requests/widgets/request_status_display.dart';

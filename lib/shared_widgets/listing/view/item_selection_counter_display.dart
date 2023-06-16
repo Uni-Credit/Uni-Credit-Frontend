@@ -1,8 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:framework/models/extensions/for_list.dart';
+import 'package:uni_credit/models/extensions/for_list.dart';
 
-import '../../../atech/models/patient.dart';
 import '../../base_template/widgets/card_button_v1.dart';
 import '../../item_sizes.dart';
 import '../../list_value_notifier.dart';

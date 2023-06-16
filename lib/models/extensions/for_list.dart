@@ -1,5 +1,5 @@
 import 'package:flutter/cupertino.dart';
-import 'package:framework/shared_widgets/list_value_notifier.dart';
+import 'package:uni_credit/shared_widgets/list_value_notifier.dart';
 
 extension ListExtension<T> on List<T> {
   List<T> copy() {

@@ -3,11 +3,11 @@ import 'dart:convert';
 import 'package:dio/dio.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:framework/atech/requests/backend_response.dart';
-import 'package:framework/requests/request_process.dart';
-import 'package:framework/shared_widgets/popups/informative_popup.dart';
-import 'package:framework/shared_widgets/popups/loading_popup.dart';
+import 'package:uni_credit/requests/request_process.dart';
+import 'package:uni_credit/shared_widgets/popups/informative_popup.dart';
+import 'package:uni_credit/shared_widgets/popups/loading_popup.dart';
 
+import '../../requests/backend_response.dart';
 import '../../requests/widgets/request_centered_view.dart';
 
 class ResponsePopup extends StatelessWidget {

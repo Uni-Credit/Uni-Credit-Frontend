@@ -25,7 +25,7 @@ dependencies:
   badges: ^2.0.3
   flutter_neumorphic: ^3.2.0
   flutter_localized_locales: any
-  intl: ^0.17.0
+  intl: ^0.18.0
   #flutter_localization: any
 
 dev_dependencies:

@@ -1,8 +1,8 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:framework/shared_widgets/base_template/size_restriction_definition/real_size_bloc.dart';
-import 'package:framework/shared_widgets/popups/template_popup.dart';
+import 'package:uni_credit/shared_widgets/base_template/size_restriction_definition/real_size_bloc.dart';
+import 'package:uni_credit/shared_widgets/popups/template_popup.dart';
 
 import '../item_sizes.dart';
 

@@ -1,5 +1,5 @@
 import 'package:flutter/cupertino.dart';
-import 'package:framework/shared_widgets/responsive/media_queries.dart';
+import 'package:uni_credit/shared_widgets/responsive/media_queries.dart';
 
 class ResponsiveWidget extends StatelessWidget {
   const ResponsiveWidget(

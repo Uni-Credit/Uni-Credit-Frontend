@@ -3,7 +3,7 @@ import 'dart:math';
 import 'package:flutter/gestures.dart';
 import 'package:flutter_neumorphic/flutter_neumorphic.dart';
 import 'package:flutter_svg/svg.dart';
-import 'package:framework/models/extensions/for_padding.dart';
+import 'package:uni_credit/models/extensions/for_padding.dart';
 import '../../graphical_item/graphical_item.dart';
 import '../../item_sizes.dart';
 
@@ -11,7 +11,7 @@ import '../../item_sizes.dart';
 // Make body options configurable by a CardBodyType enum
 // Separate this code in more than one file
 // Consider reusing the classes specified here in other contexts, such as popup definition,
-// not only it will allow you to strengthen your framework consistency, but it will also
+// not only it will allow you to strengthen your uni_credit consistency, but it will also
 // help in realizing possible issues with the current separation of concerns
 // of each section of the button
 // Make a separate static file for defining the DEFAULT values for the button

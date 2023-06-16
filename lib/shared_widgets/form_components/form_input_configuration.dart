@@ -1,5 +1,5 @@
 // used to pass information of a particular field
-import 'package:framework/shared_widgets/form_components/validation_form_controller.dart';
+import 'package:uni_credit/shared_widgets/form_components/validation_form_controller.dart';
 
 class FormInputConfiguration {
   final String fieldName;

@@ -1,4 +1,4 @@
-import 'package:framework/shared_widgets/graphical_item/svg_file_loader.dart';
+import 'package:uni_credit/shared_widgets/graphical_item/svg_file_loader.dart';
 
 import '../../theme/theme_colors.dart';
 

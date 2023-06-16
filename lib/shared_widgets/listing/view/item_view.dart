@@ -1,6 +1,5 @@
 import 'package:flutter/cupertino.dart';
 
-import '../../../atech/views/user_listing/list_patients_page/list_patients_page.dart';
 import 'item_selection.dart';
 
 class ItemViewBuilderArgs {

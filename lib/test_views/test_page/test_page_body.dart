@@ -1,4 +1,4 @@
-import 'package:framework/shared_widgets/widgets/app_container.dart';
+import 'package:uni_credit/shared_widgets/widgets/app_container.dart';
 import 'package:flutter/material.dart';
 
 class TestPageBody extends StatelessWidget {

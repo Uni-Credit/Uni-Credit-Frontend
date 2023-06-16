@@ -1,6 +1,7 @@
-import 'package:framework/models/extensions/for_build_context.dart';
+
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:uni_credit/models/extensions/for_build_context.dart';
 
 import '../shared_widgets/base_template/template_scaffold.dart';
 

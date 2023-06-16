@@ -1,7 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:framework/shared_widgets/base_template/widgets/card_button_v1.dart';
-import 'package:framework/shared_widgets/form_components/form_controller_utility.dart';
+import 'package:uni_credit/shared_widgets/base_template/widgets/card_button_v1.dart';
+import 'package:uni_credit/shared_widgets/form_components/form_controller_utility.dart';
 
 import '../card_button.dart';
 import '../item_sizes.dart';

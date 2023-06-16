@@ -2,7 +2,7 @@ import 'dart:math';
 
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:framework/shared_widgets/list_value_notifier.dart';
+import 'package:uni_credit/shared_widgets/list_value_notifier.dart';
 import '../listing/multi_child_scroll_view.dart';
 import 'form_input_configuration.dart';
 

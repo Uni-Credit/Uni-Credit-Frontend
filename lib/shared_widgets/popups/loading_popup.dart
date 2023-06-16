@@ -1,7 +1,7 @@
 import 'dart:math';
 
 import 'package:flutter/material.dart';
-import 'package:framework/shared_widgets/popups/template_popup.dart';
+import 'package:uni_credit/shared_widgets/popups/template_popup.dart';
 
 import '../item_sizes.dart';
 

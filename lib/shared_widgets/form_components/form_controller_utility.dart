@@ -1,7 +1,7 @@
 import 'dart:math';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:framework/shared_widgets/form_components/validation_form_controller.dart';
+import 'package:uni_credit/shared_widgets/form_components/validation_form_controller.dart';
 
 import '../responsive/media_queries.dart';
 import '../listing/flexible_listing.dart';

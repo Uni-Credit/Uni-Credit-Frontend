@@ -1,9 +1,9 @@
 import 'package:dio/dio.dart';
 import 'package:flutter/cupertino.dart';
-import 'package:framework/atech/requests/backend_response.dart';
-import 'package:framework/requests/caller/arguments/list_argument_caller.dart';
-import 'package:framework/requests/caller/request_caller.dart';
+import 'package:uni_credit/requests/caller/arguments/list_argument_caller.dart';
+import 'package:uni_credit/requests/caller/request_caller.dart';
 
+import '../backend_response.dart';
 import 'arguments/argument_caller.dart';
 
 class ResponseRequestCaller<G extends ArgumentCaller>
