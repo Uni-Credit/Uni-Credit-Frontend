@@ -1,10 +1,7 @@
 
 import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_localizations/flutter_localizations.dart';
-import 'package:flutter_localized_locales/flutter_localized_locales.dart';
 import 'package:uni_credit/routes/router.gr.dart';
-import 'package:uni_credit/theme/theme_colors.dart';
 
 void main() async {
   runApp(MyAppHealthProfessional());

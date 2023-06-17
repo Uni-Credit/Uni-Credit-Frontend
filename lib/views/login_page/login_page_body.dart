@@ -3,6 +3,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:uni_credit/shared_widgets/widgets/title.dart';
+import 'package:uni_credit/views/login_page/widgets/app_logo.dart';
 import 'package:uni_credit/views/login_page/widgets/login_confirm_button.dart';
 import 'package:uni_credit/views/login_page/widgets/login_form.dart';
 
@@ -57,7 +58,7 @@ class _LoginPageBodyState extends State<LoginPageBody> {
       width: 400,
       child: Column(
         children: [
-
+          AppLogo(),
           LoginForm(formUtility: formUtility), InputSpacer(),
           LoginConfirmButton(formUtility: formUtility, onLogin: onLogin),
 
