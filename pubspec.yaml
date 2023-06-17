@@ -23,7 +23,6 @@ dependencies:
   dio: ^5.0.1
   dropdown_button2: ^2.1.2
   badges: ^2.0.3
-  flutter_neumorphic: ^3.2.0
   flutter_localized_locales: any
   intl: ^0.18.0
   #flutter_localization: any
@@ -40,6 +39,8 @@ dev_dependencies:
 # The following section is specific to Flutter packages.
 flutter:
   generate: true
+
+  uses-material-design: true
   # To add assets to your package, add an assets section, like this:
   # assets:
   #   - images/a_dot_burr.jpeg

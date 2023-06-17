@@ -7,6 +7,7 @@ import 'package:uni_credit/shared_widgets/base_template/template_body.dart';
 import 'package:uni_credit/shared_widgets/base_template/template_defaults.dart';
 import 'package:uni_credit/shared_widgets/base_template/size_restriction_definition/template_restricted_element.dart';
 import 'package:flutter/material.dart';
+import '../../theme/theme_colors.dart';
 import '../responsive/media_queries.dart';
 import '../listing/multi_child_scroll_view.dart';
 
@@ -170,7 +171,7 @@ class TemplateScaffold extends StatelessWidget {
 
     return Scaffold(
       floatingActionButton: floatingAction,
-      backgroundColor: backgroundColor,
+      backgroundColor: backgroundColor ?? ThemeColors.getBackground(),
       body: Stack(
         children: [
           bodyWidget,

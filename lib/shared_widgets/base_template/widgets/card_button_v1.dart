@@ -1,9 +1,11 @@
 import 'dart:math';
 
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/gestures.dart';
-import 'package:flutter_neumorphic/flutter_neumorphic.dart';
+import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:uni_credit/models/extensions/for_padding.dart';
+import 'package:uni_credit/theme/theme_colors.dart';
 import '../../graphical_item/graphical_item.dart';
 import '../../item_sizes.dart';
 
@@ -11,7 +13,7 @@ import '../../item_sizes.dart';
 // Make body options configurable by a CardBodyType enum
 // Separate this code in more than one file
 // Consider reusing the classes specified here in other contexts, such as popup definition,
-// not only it will allow you to strengthen your uni_credit consistency, but it will also
+// not only it will allow you to strengthen your framework consistency, but it will also
 // help in realizing possible issues with the current separation of concerns
 // of each section of the button
 // Make a separate static file for defining the DEFAULT values for the button
@@ -27,10 +29,10 @@ class CardDimension {
 
   CardDimension(
       {this.size,
-      this.multiply,
-      this.maxValue,
-      this.nulify = false,
-      this.itemSize});
+        this.multiply,
+        this.maxValue,
+        this.nulify = false,
+        this.itemSize});
 
   getValue({double? defaultDefinedValue}) {
     if (nulify) {
@@ -44,6 +46,8 @@ class CardDimension {
     }
     return min((size)! * (multiply ?? 1), maxValue ?? double.infinity);
   }
+
+  static double defaultActionButtonHeight = 72;
 }
 
 class CardTextContent {
@@ -83,9 +87,9 @@ class CardTextContent {
     Widget text = content is Widget
         ? content
         : Text(
-            content,
-            style: getStyle(cardButtonV1),
-          );
+      content,
+      style: getStyle(cardButtonV1),
+    );
 
     if (padding != null) {
       text = Padding(
@@ -118,24 +122,24 @@ class CardIconData {
 
   CardIconData(
       {this.iconFlex,
-      this.icon,
-      this.padding,
-      this.color,
-      this.size,
-      this.press,
-      this.useSpacing = true,
-      this.hide = false,
-      this.backgroundColor,
-      this.height});
+        this.icon,
+        this.padding,
+        this.color,
+        this.size,
+        this.press,
+        this.useSpacing = true,
+        this.hide = false,
+        this.backgroundColor,
+        this.height});
 
   final double? height;
 
   double getIconSize(context, cardButtonV1) {
     return {
-          ItemSize.large: 32.0,
-          ItemSize.big: 32.0,
-          ItemSize.small: 24.0
-        }[cardButtonV1.buttonSize] ??
+      ItemSize.large: 32.0,
+      ItemSize.big: 32.0,
+      ItemSize.small: 24.0
+    }[cardButtonV1.buttonSize] ??
         16;
   }
 
@@ -144,12 +148,12 @@ class CardIconData {
   }
 
   getIcon(
-    context,
-    CardButtonV1, {
-    icon,
-    color,
-    double? size,
-  }) {
+      context,
+      CardButtonV1, {
+        icon,
+        color,
+        double? size,
+      }) {
     size ??= getIconSize(context, CardButtonV1);
     if (icon is GraphicalItem) {
       switch (icon.type) {
@@ -168,10 +172,10 @@ class CardIconData {
 
     return icon is IconData
         ? Icon(
-            icon,
-            size: size,
-            color: color ?? getIconColor(),
-          )
+      icon,
+      size: size,
+      color: color ?? getIconColor(),
+    )
         : icon;
   }
 
@@ -179,12 +183,12 @@ class CardIconData {
     return hide
         ? Container()
         : Padding(
-            padding: padding ?? EdgeInsets.zero,
-            child: GestureDetector(
-                onTap: press,
-                child: getIcon(context, cardButtonV1,
-                    icon: icon, color: color, size: size)),
-          );
+      padding: padding ?? EdgeInsets.zero,
+      child: GestureDetector(
+          onTap: press,
+          child: getIcon(context, cardButtonV1,
+              icon: icon, color: color, size: size)),
+    );
   }
 }
 
@@ -273,7 +277,7 @@ class CardButtonV1 extends StatelessWidget {
     this.sizePadding,
   }) {
     buttonUtility = commonButtonUtility ?? const CommonButtonUtility();
-    backgroundColor ??= Colors.blue;
+    backgroundColor ??= ThemeColors.getMainColor();
   }
 
   Map<String, Map<String, dynamic>> buttonThemes = {};
@@ -312,7 +316,7 @@ class CardButtonV1 extends StatelessWidget {
     }
 
     CardButtonV1SizeResolver sizeResolver =
-        CardButtonV1SizeResolver(buttonSize);
+    CardButtonV1SizeResolver(buttonSize);
 
     width ??= CardDimension();
 
@@ -322,8 +326,8 @@ class CardButtonV1 extends StatelessWidget {
     cardWidth ??= buttonUtility.width;
 
     double? cardHeight = height?.getValue(
-            defaultDefinedValue:
-                sizeResolver.resolveHeight(context, widget: this)) ??
+        defaultDefinedValue:
+        sizeResolver.resolveHeight(context, widget: this)) ??
         sizeResolver.resolveHeight(context, widget: this);
 
     // #todo: check if this is necessary?
@@ -350,7 +354,7 @@ class CardButtonV1 extends StatelessWidget {
 
     if ((cardIntention == CardIntention.action && getOnPress() == null) ||
         (active != null && !active!)) {
-      backgroundColor = const Color(0xffcccccc);
+      backgroundColor = ThemeColors.getDeactivatedColor();
     }
 
     /*  backgroundColor ??= getUserPrimaryColor();
@@ -385,14 +389,14 @@ class CardButtonV1 extends StatelessWidget {
       padding: sizePadding == null
           ? EdgeInsets.zero
           : sizePadding!.multiply(EdgeInsets.only(
-              top: cardHeight ?? 0,
-              bottom: cardHeight ?? 0,
-              left: cardWidth ?? 0,
-              right: cardWidth ?? 0)),
+          top: cardHeight ?? 0,
+          bottom: cardHeight ?? 0,
+          left: cardWidth ?? 0,
+          right: cardWidth ?? 0)),
       child: ConstrainedBox(
           constraints: BoxConstraints(maxWidth: cardWidth ?? double.infinity),
           child:
-              Container(width: cardWidth, height: cardHeight, child: button)),
+          Container(width: cardWidth, height: cardHeight, child: button)),
     );
   }
 }
@@ -435,8 +439,8 @@ class _ButtonShape extends StatelessWidget {
         child: button,
       );
     } else {
-      if (cardButton.usesNeumorphic) {
-        button = NeumorphicButton(
+      if (cardButton.usesNeumorphic && false) {
+        /*button = NeumorphicButton(
           onPressed: () async {
             if (cardButton.onPress == null) {
               return;
@@ -458,7 +462,7 @@ class _ButtonShape extends StatelessWidget {
                       ? null
                       : Border.all(color: cardButton.borderColor!)),
               child: button),
-        );
+        );*/
       } else {
         button = Card(
           margin: EdgeInsets.zero,
@@ -515,7 +519,7 @@ class _ButtonBody extends StatelessWidget {
 
   isIconButton() {
     return (cardButtonV1.title.content == null ||
-            cardButtonV1.title.content == "") &&
+        cardButtonV1.title.content == "") &&
         (cardButtonV1.subtitle == null ||
             cardButtonV1.subtitle!.content == "") &&
         cardButtonV1.leadingIcon != null;
@@ -591,32 +595,32 @@ class _ButtonBody extends StatelessWidget {
         isIconButton()
             ? Container()
             : getExpanded(
-                flex: cardButtonV1.title.flex ?? getElementFlex(16),
-                child: Column(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  /*  crossAxisAlignment: minButton
+          flex: cardButtonV1.title.flex ?? getElementFlex(16),
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            /*  crossAxisAlignment: minButton
                       ? CrossAxisAlignment.center
                       : CrossAxisAlignment.start,*/
-                  children: [
-                    cardButtonV1.title.getContent(cardButtonV1),
-                    cardButtonV1.subtitle?.getContent(cardButtonV1) ??
-                        Container(),
-                  ],
-                ),
-              ),
+            children: [
+              cardButtonV1.title.getContent(cardButtonV1),
+              cardButtonV1.subtitle?.getContent(cardButtonV1) ??
+                  Container(),
+            ],
+          ),
+        ),
 
         getSpacer(useSpacer: cardButtonV1.trailingIcon?.useSpacing ?? false),
 
         isIconButton() || cardButtonV1.trailingIcon == null
             ? Container()
             : getExpanded(
-                height: cardButtonV1.trailingIcon?.height,
-                containerColor: cardButtonV1.trailingIcon?.backgroundColor,
-                flex: getElementFlex(cardButtonV1.trailingIcon == null
-                    ? 0
-                    : cardButtonV1.trailingIcon!.iconFlex ?? 3),
-                child: cardButtonV1.trailingIcon!
-                    .getContent(context, cardButtonV1))
+            height: cardButtonV1.trailingIcon?.height,
+            containerColor: cardButtonV1.trailingIcon?.backgroundColor,
+            flex: getElementFlex(cardButtonV1.trailingIcon == null
+                ? 0
+                : cardButtonV1.trailingIcon!.iconFlex ?? 3),
+            child: cardButtonV1.trailingIcon!
+                .getContent(context, cardButtonV1))
 
         //Spacer(flex: spacer,),
       ],

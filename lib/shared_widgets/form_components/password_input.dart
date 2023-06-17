@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:uni_credit/shared_widgets/form_components/linked_text_input.dart';
 import 'package:uni_credit/shared_widgets/form_components/validations.dart';
 
 import '../../../../shared_widgets/form_components/form_controller_utility.dart';
@@ -129,12 +130,12 @@ class PasswordInputWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    Widget inputWidget = widget.formUtility.linkedInput(
+    Widget inputWidget = LinkedTextInput(
+      name:
       "password",
-      displayName: widget.label ?? "Senha",
       flex: flexValue,
-      decoration: InputDecoration(suffixIcon: passwordIcon),
-      focusNode: focusNode,
+      suffixIcon: passwordIcon,
+       focusNode: focusNode,
       autoValidateMode: formKey == null
           ? AutovalidateMode.onUserInteraction
           : AutovalidateMode.disabled,
@@ -142,7 +143,7 @@ class PasswordInputWidget extends StatelessWidget {
           widget.validation ??
               Validations.password(minLength: 8, showMinLength: true),
           widget.usingInputForRegistration ? passwordMessageDisplay() : ""),
-      obscure: obscuredText,
+      obscure: obscuredText, formUtility: widget.formUtility,
     );
 
     if (formKey == null) {

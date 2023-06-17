@@ -2,6 +2,7 @@ import 'dart:math';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:uni_credit/shared_widgets/form_components/validation_form_controller.dart';
+import 'package:uni_credit/theme/theme_colors.dart';
 
 import '../responsive/media_queries.dart';
 import '../listing/flexible_listing.dart';
@@ -269,15 +270,20 @@ class FormValidatorUtility {
       {String? displayName,
       required String name,
       bool usesDefaultPadding = true}) {
+
+    Widget? label = LabelText(
+      content: displayName ?? name,
+    );
     if (decoration == null) {
       decoration = InputDecoration(
-        label: LabelText(content: displayName ?? name),
-        border: const OutlineInputBorder(),
+        hintText: displayName ??name,
+        hintStyle: LabelText.getStyle(null),
+        fillColor: ThemeColors.getFirstOverlayBackground(),
+        filled: true,
+        border: OutlineInputBorder(borderSide: BorderSide(color: ThemeColors.getFirstOverlayBackground())),
       );
     } else {
-      Widget? label = LabelText(
-        content: displayName ?? name,
-      );
+
 
       if (decoration.label != null) {
         label = decoration.label;
@@ -288,8 +294,6 @@ class FormValidatorUtility {
       }
 
       decoration = decoration.copyWith(
-        label: label,
-        hintText: (displayName ?? name),
         border: const OutlineInputBorder(),
       );
     }
@@ -362,14 +366,15 @@ class LabelText extends StatelessWidget {
   const LabelText({Key? key, required this.content}) : super(key: key);
 
   static Color getTextColors() {
+    return ThemeColors.getConstrastToBackground();
     return Colors.blueAccent;
   }
 
   static double fontSize(context) {
-    double fontSize = MediaQuery.of(context).size.width * 0.015;
+    double fontSize = MediaQuery.of(context).size.width * 0.018;
 
-    fontSize = min(fontSize, 16);
-    fontSize = max(fontSize, 12);
+    fontSize = min(fontSize, 20);
+    fontSize = max(fontSize, 16);
 
     return fontSize;
   }
@@ -377,11 +382,21 @@ class LabelText extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     TextStyle labelStyle =
-        TextStyle(fontSize: fontSize(context), color: getTextColors());
+        TextStyle(
+          fontWeight: FontWeight.bold,
+          fontSize: fontSize(context), color: getTextColors(),
+        );
 
     return Text(
       content,
       style: labelStyle,
+    );
+  }
+
+  static getStyle(context) {
+    return TextStyle(
+      fontWeight: FontWeight.bold,
+      fontSize: context == null ?18 :  fontSize(context), color: getTextColors(),
     );
   }
 }

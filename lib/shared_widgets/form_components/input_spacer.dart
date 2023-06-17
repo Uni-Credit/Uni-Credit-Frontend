@@ -7,6 +7,7 @@ class InputSpacer extends StatelessWidget {
   Widget build(BuildContext context) {
     return SizedBox(
       width: 32,
+      height: 32,
     );
   }
 }

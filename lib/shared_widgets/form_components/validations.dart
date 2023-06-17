@@ -1,4 +1,8 @@
 class Validations {
+
+
+
+
   static String? Function(String?) password(
       {minLength, showMinLength = false, checkRegex = true}) {
     return (String? v) {
@@ -30,6 +34,11 @@ class Validations {
 
   static String? requiredField(String? v) {
     return (v == null || v == "") ? "Esse campo é obrigatório!" : null;
+  }
+
+
+  static String? idDeEstudante(String? v) {
+    return v == null ? 'Obrigatório!' : (v.length == 6 ? null : 'Requer 6 dígitos!');
   }
 
   static String? email(String? v) {
@@ -161,6 +170,7 @@ class Validations {
       }
     };
   }
+
 }
 
 class ValidationCheck {
