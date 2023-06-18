@@ -21,7 +21,6 @@ dependencies:
   dio: ^5.0.1
   dropdown_button2: ^2.1.2
   badges: ^2.0.3
-  flutter_localized_locales: any
   intl: ^0.18.0
   #flutter_localization: any
 
@@ -36,6 +35,9 @@ dev_dependencies:
 
 # The following section is specific to Flutter packages.
 flutter:
+
+  assets:
+    - assets/
   generate: true
 
   uses-material-design: true

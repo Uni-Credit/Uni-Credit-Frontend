@@ -57,8 +57,10 @@ class _LoginPageBodyState extends State<LoginPageBody> {
     return Container(
       width: 400,
       child: Column(
+
         children: [
           AppLogo(),
+          InputSpacer(),
           LoginForm(formUtility: formUtility), InputSpacer(),
           LoginConfirmButton(formUtility: formUtility, onLogin: onLogin),
 

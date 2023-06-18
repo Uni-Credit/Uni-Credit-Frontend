@@ -4,19 +4,19 @@ import 'package:flutter/material.dart';
 import 'package:uni_credit/routes/router.gr.dart';
 
 void main() async {
-  runApp(MyAppHealthProfessional());
+  runApp(MyApp());
 }
 
 
-class MyAppHealthProfessional extends StatefulWidget {
-  MyAppHealthProfessional({super.key});
+class MyApp extends StatefulWidget {
+  MyApp({super.key});
 
   @override
-  State<MyAppHealthProfessional> createState() =>
-      _MyAppHealthProfessionalState();
+  State<MyApp> createState() =>
+      _MyAppState();
 }
 
-class _MyAppHealthProfessionalState extends State<MyAppHealthProfessional> {
+class _MyAppState extends State<MyApp> {
   final _appRouter = AppRouter(
     /*  userTypeGuard: UserTypeGuard(), sessionTokenGuard: SessionTokenGuard()*/);
 
