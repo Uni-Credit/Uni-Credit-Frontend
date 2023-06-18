@@ -9,7 +9,6 @@ import 'package:uni_credit/views/login_page/login_page.dart';
   replaceInRouteName: 'Page,Route',
   routes: [
     AutoRoute(page: LoginPage, path: '/')
-
   ],
 )
 class $AppRouter {}
