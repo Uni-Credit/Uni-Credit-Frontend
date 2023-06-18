@@ -63,6 +63,7 @@ class _MainPageState extends State<MainPage> {
             width: size,
             height: size,
           ),
+
         ) :
         Row(
           children: [
