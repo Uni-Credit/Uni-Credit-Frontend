@@ -1,15 +1,16 @@
 
 
+
 import 'package:auto_route/annotations.dart';
-import 'package:uni_credit/views/login_page/login_page.dart';
+import 'package:auto_route/auto_route.dart';
+import 'package:uni_credit/routes/router.gr.dart';
 
-// Run " flutter packages pub run build_runner build " to update routes
 
-@MaterialAutoRouter(
-  replaceInRouteName: 'Page,Route',
-  routes: [
-    AutoRoute(page: LoginPage, path: '/')
-  ],
-)
-class $AppRouter {}
+@AutoRouterConfig(replaceInRouteName: 'Page,Route')
+class AppRouter extends $AppRouter {
 
+  @override
+  List<AutoRoute> get routes => [
+    AutoRoute(page: PageInfo(LoginRoute.name), initial: true)
+  ];
+}

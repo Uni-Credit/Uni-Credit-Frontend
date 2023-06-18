@@ -1,6 +1,7 @@
 
 import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
+import 'package:uni_credit/routes/router.dart';
 import 'package:uni_credit/routes/router.gr.dart';
 
 void main() async {

@@ -1,10 +1,12 @@
 
 
+import 'package:auto_route/annotations.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:uni_credit/shared_widgets/base_template/template_scaffold.dart';
 
 import 'login_page_body.dart';
 
+@RoutePage()
 class LoginPage extends StatelessWidget {
   const LoginPage({super.key});
 
