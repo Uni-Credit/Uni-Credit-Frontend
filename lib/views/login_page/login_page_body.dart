@@ -60,8 +60,9 @@ class _LoginPageBodyState extends State<LoginPageBody> {
 
         children: [
           AppLogo(),
-          InputSpacer(),
-          LoginForm(formUtility: formUtility), InputSpacer(),
+          InputSpacer(multiply: 2.0),
+          LoginForm(formUtility: formUtility),
+          InputSpacer(multiply: 2,),
           LoginConfirmButton(formUtility: formUtility, onLogin: onLogin),
 
         ],

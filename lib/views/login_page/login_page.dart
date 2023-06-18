@@ -11,7 +11,8 @@ class LoginPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return TemplateScaffold(
-      useDefaultPadding: false,
+      useDefaultPadding: true,
+
       appbarConfig: AppbarConfiguration(
         ignorePadding: true
       ),
