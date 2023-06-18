@@ -5,6 +5,8 @@ import 'package:flutter/material.dart';
 import '../base_template/widgets/card_button_v1.dart';
 import '../item_sizes.dart';
 
+// Builder class for template dropdown visuals, for dropdown definition go to
+// DropdownField
 class TemplateDropdown extends StatelessWidget {
   final DropdownBuilderArgs args;
   final Color? backgroundColor;

@@ -22,6 +22,7 @@ dependencies:
   dropdown_button2: ^2.1.2
   badges: ^2.0.3
   intl: ^0.18.0
+  firebase_core: ^2.14.0
   #flutter_localization: any
 
 dev_dependencies:

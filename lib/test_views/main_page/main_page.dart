@@ -3,7 +3,9 @@
 
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:uni_credit/shared_widgets/form_components/template_dropdown.dart';
 
+import '../../shared_widgets/form_components/dropdown_field.dart';
 import 'main_page_function.dart';
 
 class MainPage extends StatefulWidget {
@@ -43,43 +45,20 @@ class _MainPageState extends State<MainPage> {
   @override
   Widget build(BuildContext context) {
 
-    double size = 50;
-
-
-
     return Scaffold(
-        body:
+        body: Padding(
+          padding: const EdgeInsets.only(top: 24.0, left: 32),
+          child: DropdownField(items: [
 
-        true ?
-        GestureDetector(
-          onTap: (){
-            setState(() {
-              multiplicador *= -1;
-            });
-          },
-          child: Container(
-            margin: EdgeInsets.only(top: y, left: x),
-            color: getContainerColorPositional(0, 1),
-            width: size,
-            height: size,
-          ),
+            DropdownItem(value: 'Classe 1'),
+            DropdownItem(value: 'Classe 2'),
+            DropdownItem(value: 'Classe 3'),
+            DropdownItem(value: 'Classe 4'),
 
-        ) :
-        Row(
-          children: [
-            Container(
-              margin: EdgeInsets.all(100),
-              color: getContainerColorPositional(1, 0),
-              width: 50,
-              height: 50,
-            ),Container(
-              margin: EdgeInsets.all(100),
-              color: Colors.black,
-              width: 50,
-              height: 50,
-            ),
           ],
+          ),
         )
     );
   }
 }
+
