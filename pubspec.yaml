@@ -23,6 +23,7 @@ dependencies:
   badges: ^3.1.1
   intl: ^0.18.0
   firebase_core: ^2.14.0
+  introduction_screen: ^3.1.9
   #flutter_localization: any
 
 dev_dependencies:

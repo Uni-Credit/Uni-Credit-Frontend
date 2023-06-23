@@ -30,7 +30,7 @@ class IconActionCardButton extends StatelessWidget {
     this.iconSize,
     this.desktopSize,
     this.mobileSize,
-    required this.onPress,
+     this.onPress,
     this.pressEnabled,
     this.forceMobile = false,
     this.useIconInDesktop = false,

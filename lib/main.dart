@@ -3,6 +3,7 @@ import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
 import 'package:uni_credit/routes/router.dart';
 import 'package:uni_credit/routes/router.gr.dart';
+import 'package:uni_credit/theme/theme_colors.dart';
 
 void main() async {
   runApp(MyApp());
@@ -25,13 +26,14 @@ class _MyAppState extends State<MyApp> {
   Widget build(BuildContext context) {
     //debugPrint("Running my app build");
 
-    return MaterialApp.router(
-        debugShowCheckedModeBanner: false,
-        theme: appTheme(),
-        //  locale: MyApp.languageController.locale,
-        routerDelegate: routerDelegate(),
-        routeInformationParser: _appRouter.defaultRouteParser(),
-      ) ;
+    return
+      MaterialApp.router(
+          debugShowCheckedModeBanner: false,
+          theme: appTheme(),
+          //  locale: MyApp.languageController.locale,
+          routerDelegate: routerDelegate(),
+          routeInformationParser: _appRouter.defaultRouteParser(),
+        ) ;
   }
 
   AutoRouterDelegate routerDelegate() {
@@ -44,9 +46,12 @@ class _MyAppState extends State<MyApp> {
 
   ThemeData appTheme() {
     return ThemeData(
+      brightness: Brightness.dark,
       textTheme: TextTheme(
         //labelMedium: TextStyle(color: ThemeColors.getConstrastToBackground())
       ),
+      primaryColor: ThemeColors.getFirstOverlayBackground(),
+      //colorScheme: ColorScheme(),
       scrollbarTheme: ScrollbarThemeData(
           trackColor:
           MaterialStateColor.resolveWith((states) => Color(0xffcccccc)),
