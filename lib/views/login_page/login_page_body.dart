@@ -1,7 +1,9 @@
 
 
+import 'package:auto_route/auto_route.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:uni_credit/routes/router.gr.dart';
 import 'package:uni_credit/shared_widgets/widgets/title.dart';
 import 'package:uni_credit/views/login_page/widgets/app_logo.dart';
 import 'package:uni_credit/views/login_page/widgets/login_confirm_button.dart';
@@ -35,6 +37,8 @@ class _LoginPageBodyState extends State<LoginPageBody> {
   }
 
   onLogin() async {
+    context.router.push(Dashboard());
+    return;
     AuthenticationProtocol.attemptLogin(
         arguments:
         FreeFormArgumentCaller(args: formValidationController.readFields()),
@@ -61,7 +65,9 @@ class _LoginPageBodyState extends State<LoginPageBody> {
         children: [
           AppLogo(),
           InputSpacer(multiply: 2.0),
-          LoginForm(formUtility: formUtility),
+          LoginForm(formUtility: formUtility,
+          onConfirm: onLogin,
+          ),
           InputSpacer(multiply: 2,),
           LoginConfirmButton(formUtility: formUtility, onLogin: onLogin),
 

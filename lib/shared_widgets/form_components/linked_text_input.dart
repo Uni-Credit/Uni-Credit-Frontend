@@ -4,6 +4,19 @@ import 'package:flutter/services.dart';
 
 import 'form_controller_utility.dart';
 
+
+
+
+class LinkedTextInputStyle {
+
+  final TextInputAction? inputAction;
+  final  Function(String)? whenSubmitted;
+
+  LinkedTextInputStyle({
+     this.inputAction, this.whenSubmitted,
+});
+}
+
 class LinkedTextInput extends StatefulWidget {
   final FormValidatorUtility formUtility;
   final String name;
@@ -35,6 +48,7 @@ class LinkedTextInput extends StatefulWidget {
   bool usesDefaultValidator;
 
   Function(String)? onFieldSubmitted;
+  final LinkedTextInputStyle? inputStyle;
 
   static const double defaultTopInputSpacing = 24;
 
@@ -42,6 +56,7 @@ class LinkedTextInput extends StatefulWidget {
     Key? key,
     required this.formUtility,
     required this.name,
+    this.inputStyle,
     this.flex,
     this.overrideMultiplier = false,
     this.obscure = false,
@@ -190,11 +205,13 @@ class _LinkedTextInputState extends State<LinkedTextInput> {
       maxLines: widget.maxLines ?? 1,
       keyboardType: widget.keyboardType,
       focusNode: widget.focusNode,
+      textInputAction: widget.inputStyle?.inputAction ?? FormBase.defaultTextInputAction,
       inputFormatters: widget.formatters,
-
+      style:
+      LabelText.getStyle(context) ,
 //      readOnly: true,
 
-      onFieldSubmitted: widget.onFieldSubmitted,
+      onFieldSubmitted: widget.inputStyle?.whenSubmitted ?? widget.onFieldSubmitted,
     );
 
     widget.inputWidth ??= widget.formUtility.defaultInputWidth;

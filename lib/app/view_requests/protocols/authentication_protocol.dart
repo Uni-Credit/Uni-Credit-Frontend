@@ -64,6 +64,6 @@ class AuthenticationProtocol {
     debugPrint(response.data.runtimeType.toString());
     debugPrint(response.data.toString());
 
-    Session.info = response.data;
+    Session.setInfo(response.data);
   }
 }

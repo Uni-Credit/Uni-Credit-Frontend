@@ -17,6 +17,12 @@ class ThemeColors {
     return Color(0xff808080);
   }
 
+  static getDark() {
+    return Color(0xff212120);
+  }
+
+
+
 
  static getDeactivatedColor() {
     return Color(0xff767D7E);
@@ -25,6 +31,31 @@ class ThemeColors {
   static  getMainColor() {
     return Color(0xff1E636C);
   }
+
+  static getGreen() {
+    return Color(0xff7B926C);
+  }
+
+  static getDarkGreen() {
+    return Color(0xff75795F);
+  }
+  static getVibrantGreen() {
+    return Color(0xff53C280);
+  }
+  static getVibrantOrange() {
+    return Color(0xffE4A373);
+  }
+  static getVibrantBlue() {
+    return Color(0xff53C2C2);
+  }
+
+  static getLightGreen() {
+
+    return Color(0xffCDFFED);
+  }
+
+
+
 
 
 

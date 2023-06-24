@@ -1,10 +1,12 @@
 
 
+import 'dart:convert';
+
 import 'package:flutter/cupertino.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 class Session {
-  static Map<String, dynamic> info = {};
+  static Map<String, dynamic>? _info;
 
 //sessionToken;
 
@@ -13,6 +15,20 @@ class Session {
   static PreferenceValue<bool> firstSession = PreferenceValue<bool>(name: 'firstSession',
   defaultValue: true);
 
+
+  Map<String, dynamic>  get info => _info ?? {};
+
+  static getInfo() async {
+    if(_info != null) {
+      return _info;
+    }
+    return jsonDecode(await prefs!.getString('session') ?? '{}');
+  }
+
+  static setInfo(Map<String, dynamic> info) {
+    _info = info;
+    prefs?.setString('session', jsonEncode(info));
+  }
 
   static Future<SharedPreferences> getPrefs() async {
 
@@ -66,6 +82,9 @@ class PreferenceValue<T> {
 
   setValue(T value) async {
     SharedPreferences prefs =(await Session.getPrefs());
+
+    // alternative: save and load as string -> prefs.setString(name, value);
+    // Problem: Loses any point of using a generic type argument
     switch (value.runtimeType) {
       case int:
         return (prefs.setInt(name, value as int)) ;

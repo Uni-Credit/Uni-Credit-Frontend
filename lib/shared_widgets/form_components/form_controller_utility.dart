@@ -7,6 +7,11 @@ import 'package:uni_credit/theme/theme_colors.dart';
 import '../responsive/media_queries.dart';
 import '../listing/flexible_listing.dart';
 
+
+class FormBase {
+  static TextInputAction defaultTextInputAction = TextInputAction.next;
+}
+
 class FormValidatorUtility {
   int flexMultiplier = 1;
 
@@ -222,6 +227,7 @@ class FormValidatorUtility {
       autovalidateMode: autoValidateMode,
       validator: validatorFunction,
       decoration: decoration,
+
       obscureText: obscure,
       obscuringCharacter: "*",
       enabled: fieldsEnabled && enabled,
@@ -276,6 +282,7 @@ class FormValidatorUtility {
     );
     if (decoration == null) {
       decoration = InputDecoration(
+
         hintText: displayName ??name,
         hintStyle: LabelText.getStyle(null),
         fillColor: ThemeColors.getFirstOverlayBackground(),

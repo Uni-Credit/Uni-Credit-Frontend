@@ -10,12 +10,16 @@ import 'input_spacer.dart';
 class PasswordInput extends StatefulWidget {
   final FormValidatorUtility formUtility;
   final String? label;
+  final LinkedTextInputStyle? inputStyle;
   final bool usingInputForRegistration;
   final String? Function(String? v)? validation;
+  final TextInputAction? inputAction;
   const PasswordInput(
       {this.usingInputForRegistration = false,
       this.label,
       required this.formUtility,
+        this.inputAction,
+        this.inputStyle,
       Key? key,
       this.validation})
       : super(key: key);
@@ -77,6 +81,7 @@ class _PasswordInputState extends State<PasswordInput> {
             flexValue: flexValue,
             passwordIcon: passwordIcon,
             obscuredText: obscuredText,
+            inputStyle: widget.inputStyle
           ),
           widget.usingInputForRegistration ? InputSpacer() : Container(),
           Visibility(
@@ -107,6 +112,7 @@ class _PasswordInputState extends State<PasswordInput> {
 }
 
 class PasswordInputWidget extends StatelessWidget {
+  final LinkedTextInputStyle? inputStyle;
   const PasswordInputWidget({
     super.key,
     required this.formKey,
@@ -114,7 +120,7 @@ class PasswordInputWidget extends StatelessWidget {
     required this.obscuredText,
     required this.focusNode,
     this.flexValue,
-    required this.passwordIcon,
+    required this.passwordIcon, this.inputStyle,
   });
 
   final IconButton passwordIcon;
@@ -131,6 +137,7 @@ class PasswordInputWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     Widget inputWidget = LinkedTextInput(
+      inputStyle: inputStyle,
       name:
       "password",
       flex: flexValue,

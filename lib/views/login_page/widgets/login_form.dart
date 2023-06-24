@@ -15,10 +15,12 @@ class LoginForm extends StatelessWidget {
   final FormValidatorUtility formUtility;
   final Function()? onForgetPasswordClick;
   final Widget? appending;
+  final Function() onConfirm;
 
   const LoginForm(
       {Key? key,
         this.appending,
+        required this.onConfirm,
         this.onForgetPasswordClick,
         required this.formUtility})
       : super(key: key);
@@ -36,6 +38,12 @@ class LoginForm extends StatelessWidget {
         PasswordInput(
             formUtility: formUtility,
             label: 'Senha do Sistema',
+            inputStyle: LinkedTextInputStyle(inputAction: TextInputAction.go,
+              whenSubmitted: (_){
+                onConfirm();
+              }
+              
+            ),
             validation: Validations.override(
                 Validations.password(checkRegex: false, minLength: 3), '')),
         appending ?? Container()

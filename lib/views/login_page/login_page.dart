@@ -15,7 +15,7 @@ import 'package:uni_credit/views/login_page/widgets/introduction_view.dart';
 
 import 'login_page_body.dart';
 
-@RoutePage()
+@RoutePage(name: 'login')
 class LoginPage extends StatefulWidget {
   const LoginPage({super.key});
 

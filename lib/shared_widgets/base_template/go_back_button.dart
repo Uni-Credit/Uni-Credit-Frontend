@@ -1,5 +1,6 @@
 import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
+import 'package:uni_credit/theme/theme_colors.dart';
 
 class GoBackButton extends StatelessWidget {
   Function()? defaultGoBack;
@@ -30,7 +31,7 @@ class GoBackButton extends StatelessWidget {
     return IconButton(
       icon: Icon(
         icon ?? Icons.arrow_back,
-        size: iconSize,
+        size: iconSize,color: Colors.white,
       ),
       iconSize: iconSize + 8,
       alignment: alignment ?? Alignment.center,
