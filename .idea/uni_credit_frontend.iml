@@ -21,6 +21,9 @@
       <excludeFolder url="file://$MODULE_DIR$/web/.pub" />
       <excludeFolder url="file://$MODULE_DIR$/web/.dart_tool" />
       <excludeFolder url="file://$MODULE_DIR$/web/build" />
+      <excludeFolder url="file://$MODULE_DIR$/.firebase/unicreditfrontend/hosting/build" />
+      <excludeFolder url="file://$MODULE_DIR$/.firebase/unicreditfrontend/hosting/.pub" />
+      <excludeFolder url="file://$MODULE_DIR$/.firebase/unicreditfrontend/hosting/.dart_tool" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />

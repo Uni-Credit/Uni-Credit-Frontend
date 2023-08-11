@@ -13,6 +13,7 @@ import 'package:uni_credit/shared_widgets/item_sizes.dart';
 import 'package:uni_credit/theme/theme_colors.dart';
 import 'package:uni_credit/views/login_page/widgets/introduction_view.dart';
 
+import '../../test_views/test_page/test_page.dart';
 import 'login_page_body.dart';
 
 @RoutePage()
@@ -26,12 +27,12 @@ class LoginPage extends StatefulWidget {
 class _LoginPageState extends State<LoginPage> {
 
   @override
-  void initState() {
+  //void initState() {
     // TODO: implement initState
-    super.initState();
+    //super.initState();
 
-    callForIntroduction();
-  }
+    //callForIntroduction();
+  //}
 
   callForIntroduction({bool alwaysShow=false}) async {
 
@@ -47,6 +48,7 @@ class _LoginPageState extends State<LoginPage> {
 
   @override
   Widget build(BuildContext context) {
+    return TestPage();
     return TemplateScaffold(
       useDefaultPadding: true,
 
