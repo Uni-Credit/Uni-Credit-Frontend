@@ -20,22 +20,19 @@ class DashboardButtons extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           children: [
             IconActionCardButton(content: 'Transacionar', icon: Icon(Icons.credit_card_sharp),
-            backgroundColor: ThemeColors.getVibrantGreen(),
-
+            backgroundColor: ThemeColors.getButtonColor(),// ThemeColors.getVibrantGreen(),
             onPress: (){
               context.router.push(Transaction());
             },),
             IconActionCardButton(content: 'Histórico', icon: Icon(Icons.file_present),
-            backgroundColor: ThemeColors.getVibrantBlue(),
-
+            backgroundColor: ThemeColors.getButtonColor(),//ThemeColors.getVibrantBlue(),
               onPress: (){
 
                 context.router.push(Historic( ));
               },),
             IconActionCardButton(content: 'Configurações', icon: Icon(Icons.settings),
-            backgroundColor: ThemeColors.getVibrantOrange(),
+            backgroundColor: ThemeColors.getButtonColor(),//ThemeColors.getVibrantOrange(),
               onPress: (){
-
                 context.router.push(Configuration());
               },),
 

@@ -48,7 +48,7 @@ class _LoginPageState extends State<LoginPage> {
   @override
   Widget build(BuildContext context) {
     return TemplateScaffold(
-      useDefaultPadding: true,
+      useDefaultPadding: false,
 
       appbarConfig: AppbarConfiguration(
         ignorePadding: true,

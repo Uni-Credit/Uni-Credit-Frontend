@@ -2,6 +2,7 @@
 
 
 import 'package:flutter/cupertino.dart';
+import 'package:flutter/material.dart';
 
 import '../../../shared_widgets/base_template/widgets/card_button_v1.dart';
 import '../../../shared_widgets/form_components/form_controller_utility.dart';
@@ -18,10 +19,10 @@ class LoginConfirmButton extends StatelessWidget {
   Widget build(BuildContext context) {
     return CardButtonV1(
       title: CardTextContent(content: 'Login'),
-      buttonSize: ItemSize.normal,
-      cardIntention: CardIntention.action,
+      leadingIcon: CardIconData(icon: Icon(Icons.person)),
       width: CardDimension(nulify: true),
-      height:  CardDimension(size: CardDimension.defaultActionButtonHeight),
+      cardIntention: CardIntention.action,
+      trailingIcon: CardIconData(),
       pressEnabled:
       formUtility.formController.getValidationState(emptyDefault: false),
       onPress: onLogin,

@@ -53,7 +53,7 @@ class _PasswordInputManagerState extends State<PasswordInputManager> {
           icon: widget.iconItem ??
               Icon(
                 getIcon(),
-                color: widget.iconColor,
+                color: widget.iconColor  ?? Theme.of(context).colorScheme.background,
               ),
         ));
   }

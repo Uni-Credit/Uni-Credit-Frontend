@@ -277,7 +277,7 @@ class CardButtonV1 extends StatelessWidget {
     this.sizePadding,
   }) {
     buttonUtility = commonButtonUtility ?? const CommonButtonUtility();
-    backgroundColor ??= ThemeColors.getMainColor();
+    backgroundColor ??= ThemeColors.getSpecialColor();
   }
 
   Map<String, Map<String, dynamic>> buttonThemes = {};
@@ -338,7 +338,7 @@ class CardButtonV1 extends StatelessWidget {
 
     if (buttonSize == ItemSize.unlimited) {
       cardWidth = null;
-      cardHeight = null;
+      // cardHeight = null;
     }
 
     if (buttonSize == ItemSize.minimal) {
@@ -661,6 +661,8 @@ class CardButtonV1SizeResolver extends ItemSizeResolver {
 
   Map<ItemSize, double> minWidthResolver = {
     ItemSize.small: 160,
+  //  ItemSize.big: 400,
+
   };
 
   Map<ItemSize, double> rawResolver = {

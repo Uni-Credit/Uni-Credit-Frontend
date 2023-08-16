@@ -56,6 +56,7 @@ class FormValidatorUtility {
       bool ignoreLastSpacer = true,
       bool visible = true,
       MainAxisSize? mainAxisSize,
+        CrossAxisAlignment? crossAxis,
       usesLineSpacing = true,
       usesItemSpacing = true,
       DeviceOption<Axis>? deviceAxis}) {
@@ -119,7 +120,7 @@ class FormValidatorUtility {
             ? (inputLinePadding ?? EdgeInsets.zero)
             : EdgeInsets.zero,
         child: FlexibleListing(
-          crossAxisAlignment: CrossAxisAlignment.start,
+          crossAxisAlignment: crossAxis ?? CrossAxisAlignment.start,
           deviceAxis: deviceAxis,
           mainAxisSize: mainAxisSize,
           children: childrenList,

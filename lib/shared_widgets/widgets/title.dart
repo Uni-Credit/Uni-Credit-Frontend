@@ -22,6 +22,10 @@ class TitleWidget extends StatelessWidget {
 
   final MainAxisSize? mainAxisSize;
 
+  static Color textColor = Colors.black;
+
+
+  final Color? textColorForTitle;
   const TitleWidget(
       {Key? key,
       required this.title,
@@ -32,12 +36,13 @@ class TitleWidget extends StatelessWidget {
       this.paddingBottom,
       this.titleWeight,
       this.titleSize,
+        this.textColorForTitle,
       this.textType = TextType.title})
       : super(key: key);
 
   getTextSize(context) {
     double screenFontSize = MediaQuery.of(context).size.width * 0.35;
-    double fontSize = titleSize ?? (textType == TextType.title ? 20 : 16);
+    double fontSize = titleSize ?? (textType == TextType.title ? 30 : 16);
 
     double smallestFontSize = fontSize * 0.5;
 
@@ -89,7 +94,7 @@ class TitleWidget extends StatelessWidget {
                     ? tittleStyle!.copyWith(fontSize: getTextSize(context))
                     : TextStyle(
                         fontSize: getTextSize(context),
-                        color: Colors.black,
+                        color: textColorForTitle ?? textColor,
                         fontWeight: getFontWeight()),
               ),
             ),

@@ -4,6 +4,9 @@ import 'package:auto_route/auto_route.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:uni_credit/routes/router.gr.dart';
+import 'package:uni_credit/shared_widgets/base_template/widgets/card_button_v1.dart';
+import 'package:uni_credit/shared_widgets/card_button/icon_action_card_button.dart';
+import 'package:uni_credit/shared_widgets/item_sizes.dart';
 import 'package:uni_credit/shared_widgets/widgets/title.dart';
 import 'package:uni_credit/views/login_page/widgets/app_logo.dart';
 import 'package:uni_credit/views/login_page/widgets/login_confirm_button.dart';
@@ -68,9 +71,26 @@ class _LoginPageBodyState extends State<LoginPageBody> {
           LoginForm(formUtility: formUtility,
           onConfirm: onLogin,
           ),
-          InputSpacer(multiply: 2,),
+          InputSpacer( ),
           LoginConfirmButton(formUtility: formUtility, onLogin: onLogin),
 
+          InputSpacer(),
+          CardButtonV1(
+            width: CardDimension(nulify: true),
+              title: CardTextContent(content: 'Registrar'),
+              onPress: (){
+                context.router.push(
+                  Register()
+                );
+              },
+              leadingIcon: CardIconData(
+                icon: Icon(
+                    Icons.person_add
+                )
+              ),
+              trailingIcon: CardIconData(),
+
+          ),
         ],
       ),
     );

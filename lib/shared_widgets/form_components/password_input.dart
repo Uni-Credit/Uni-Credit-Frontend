@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:uni_credit/shared_widgets/form_components/linked_text_input.dart';
 import 'package:uni_credit/shared_widgets/form_components/validations.dart';
+import 'package:uni_credit/shared_widgets/responsive/media_queries.dart';
 
 import '../../../../shared_widgets/form_components/form_controller_utility.dart';
 import '../../../../shared_widgets/form_components/linked_input_icon.dart';
@@ -71,42 +72,54 @@ class _PasswordInputState extends State<PasswordInput> {
     int flexValue = 1;
     double iconPadding = 8;
 
-    return PasswordInputManager(
-      inputBuilder: (bool obscuredText, passwordIcon) {
-        return widget.formUtility.InputLine(children: [
-          PasswordInputWidget(
-            formKey: widget.usingInputForRegistration ? _formKey : null,
-            widget: widget,
-            focusNode: focusNode,
-            flexValue: flexValue,
-            passwordIcon: passwordIcon,
-            obscuredText: obscuredText,
-            inputStyle: widget.inputStyle
-          ),
-          widget.usingInputForRegistration ? InputSpacer() : Container(),
-          Visibility(
-            visible: widget.usingInputForRegistration,
-            child: PasswordInputManager(
-                inputBuilder: (bool obscuredText, passwordIcon) {
-              return widget.formUtility.linkedInput(
-                "confirm_password",
-                flex: flexValue,
-                displayName: "Repetir senha",
-                autoValidateMode: AutovalidateMode.onUserInteraction,
-                obscure: obscuredText,
-                validator: (String? v) {
-                  return v ==
-                          widget.formUtility.formController
-                              .readField("password")
-                      ? null
-                      : "As senhas não conferem";
-                },
-                controller: confirmPassowrdController,
-              );
-            }),
-          )
-        ]);
-      },
+    MediaQuery.of(context).size.width;
+    return Container(
+
+      child: PasswordInputManager(
+        inputBuilder: (bool obscuredText, passwordIcon) {
+          return widget.formUtility.InputLine(
+            mainAxisSize: MainAxisSize.min,
+              deviceAxis: DeviceOption(
+                defaultResult: Axis.horizontal,
+                mobile: Axis.vertical
+              ),
+              children: [
+            PasswordInputWidget(
+              formKey: widget.usingInputForRegistration ? _formKey : null,
+              widget: widget,
+              focusNode: focusNode,
+              flexValue: flexValue,
+              passwordIcon: passwordIcon,
+              obscuredText: obscuredText,
+              inputStyle: widget.inputStyle
+            ),
+            widget.usingInputForRegistration ? InputSpacer(
+              multiply: isMobile() ? 0 : 1 ,
+            ) : Container(),
+            Visibility(
+              visible: widget.usingInputForRegistration,
+              child: PasswordInputManager(
+                  inputBuilder: (bool obscuredText, passwordIcon) {
+                return widget.formUtility.linkedInput(
+                  "confirm_password",
+                  flex: flexValue,
+                  displayName: "Repetir senha",
+                  autoValidateMode: AutovalidateMode.onUserInteraction,
+                  obscure: obscuredText,
+                  validator: (String? v) {
+                    return v ==
+                            widget.formUtility.formController
+                                .readField("password")
+                        ? null
+                        : "As senhas não conferem";
+                  },
+                  controller: confirmPassowrdController,
+                );
+              }),
+            )
+          ]);
+        },
+      ),
     );
   }
 }
@@ -140,6 +153,7 @@ class PasswordInputWidget extends StatelessWidget {
       inputStyle: inputStyle,
       name:
       "password",
+      displayName: 'Senha',
       flex: flexValue,
       suffixIcon: passwordIcon,
        focusNode: focusNode,

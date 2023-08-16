@@ -49,10 +49,24 @@ class _MyAppState extends State<MyApp> {
   ThemeData appTheme() {
     return ThemeData(
       brightness: Brightness.dark,
+      inputDecorationTheme: InputDecorationTheme(
+        focusedBorder: OutlineInputBorder(
+          borderSide: BorderSide(color: ThemeColors.getSpecialColor(), width: 1.5)
+        )
+      ),
       textTheme: TextTheme(
         //labelMedium: TextStyle(color: ThemeColors.getConstrastToBackground())
       ),
-      primaryColor: ThemeColors.getFirstOverlayBackground(),
+
+      iconButtonTheme: IconButtonThemeData(style: ButtonStyle(
+          iconColor: MaterialStateColor.resolveWith((states) {
+            return ThemeColors.getDeactivatedColor();
+          })
+      )),
+       primaryColor: ThemeColors.getFirstOverlayBackground(),
+      colorScheme: ColorScheme.dark(
+
+      ),
       //colorScheme: ColorScheme(),
       scrollbarTheme: ScrollbarThemeData(
           trackColor:

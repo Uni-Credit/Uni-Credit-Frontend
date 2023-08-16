@@ -8,6 +8,7 @@ import 'package:uni_credit/shared_widgets/base_template/template_defaults.dart';
 import 'package:uni_credit/shared_widgets/base_template/size_restriction_definition/template_restricted_element.dart';
 import 'package:flutter/material.dart';
 import '../../theme/theme_colors.dart';
+import '../../views/dashboard_page/widgets/dashboard_buttons.dart';
 import '../responsive/media_queries.dart';
 import '../listing/multi_child_scroll_view.dart';
 
@@ -112,6 +113,7 @@ class TemplateScaffold extends StatelessWidget {
   final Widget? floatingAction;
 
   final bool? isUsingDrawer;
+  final List<Widget>? footer;
 
   TemplateScaffold(
       {Key? key,
@@ -121,6 +123,7 @@ class TemplateScaffold extends StatelessWidget {
       this.useDefaultPadding = true,
       this.nullifyHeight = false,
       this.bodyParent,
+        this.footer,
       this.showRouteNavigator = true,
       this.floatingAction,
       this.background,
@@ -171,6 +174,15 @@ class TemplateScaffold extends StatelessWidget {
 
     return Scaffold(
       floatingActionButton: floatingAction,
+   //   persistentFooterButtons: footer,
+
+      bottomNavigationBar: footer == null ? null : Container(
+
+        child: Column(
+          mainAxisSize: MainAxisSize.min,
+          children: footer!,
+        ),
+      ),
       backgroundColor: backgroundColor ?? ThemeColors.getBackground(),
       body: Stack(
         children: [
@@ -183,7 +195,7 @@ class TemplateScaffold extends StatelessWidget {
       ),
       appBar: appbarConfiguration.hasAppBar()
           ? elementDefinition.getElement(
-              width: Framework.templateDefaults.appbar.restrictWidth
+              width: !Framework.templateDefaults.appbar.restrictWidth
                   ? null
                   : MediaQuery.of(context).size.width,
               content: appbarConfiguration.content ??

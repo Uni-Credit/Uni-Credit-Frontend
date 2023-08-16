@@ -38,10 +38,12 @@ class LoginForm extends StatelessWidget {
         PasswordInput(
             formUtility: formUtility,
             label: 'Senha do Sistema',
-            inputStyle: LinkedTextInputStyle(inputAction: TextInputAction.go,
+            inputStyle: LinkedTextInputStyle(
+              inputAction: TextInputAction.done,
               whenSubmitted: (_){
                 onConfirm();
-              }
+              },
+
               
             ),
             validation: Validations.override(
