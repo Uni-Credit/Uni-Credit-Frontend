@@ -1,9 +1,8 @@
 
 import 'package:flutter/cupertino.dart';
-
-import '../../../shared_widgets/form_components/form_controller_utility.dart';
-import '../../../shared_widgets/form_components/linked_text_input.dart';
-import '../../../shared_widgets/form_components/validations.dart';
+import 'package:framework/shared_widgets/form_components/form_controller_utility.dart';
+import 'package:framework/shared_widgets/form_components/linked_text_input.dart';
+import 'package:framework/shared_widgets/form_components/validations.dart';
 
 class EmailInput extends StatelessWidget {
   const EmailInput({

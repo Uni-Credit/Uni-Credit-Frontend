@@ -6,11 +6,12 @@ class ThemeColors {
   }
 
   static getBackground() {
+    return  Color(0xff0B0E0C);
     return Color(0xff393434);
   }
 
   static getFirstOverlayBackground() {
-    return Color(0xffD9D9D9);
+    return Color(0xff13199C);
   }
 
   static getConstrastToBackground() {
@@ -18,7 +19,7 @@ class ThemeColors {
   }
 
   static getDark() {
-    return Color(0xff212120);
+    return Color(0xff0B0E0C);
   }
 
 
@@ -29,13 +30,13 @@ class ThemeColors {
   }
 
   static  getSpecialColor() {
-    return Color(0xffA05DB1);
 
-    return Color(0xff8F7396);
+    return Color(0xff3E47F9);
   }
 
   static getButtonColor() {
-    return Color(0xffB77BC7);
+    return getActionColor();
+    return Color(0xff3E47F9);
   }
 
   static getGreen() {
@@ -47,7 +48,7 @@ class ThemeColors {
     return Color(0xff75795F);
   }
   static getVibrantGreen() {
-    return Color(0xff92E689);
+    return Color(0xff3FB50D);
   }
   static getVibrantOrange() {
     return Color(0xffF5853F);
@@ -60,6 +61,16 @@ class ThemeColors {
 
     return Color(0xffCDFFED);
   }
+
+  static Color getActionColor() {
+    return Color(0xffF7AF03);
+  }
+
+  static Color cardColor() {
+    return Color(0xff13199C);
+    return Color(0xff9E5409);
+  }
+
 
 
 

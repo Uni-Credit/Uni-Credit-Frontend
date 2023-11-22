@@ -1,32 +1,55 @@
-
-
-
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-
-import '../../../shared_widgets/base_template/widgets/card_button_v1.dart';
-import '../../../shared_widgets/form_components/form_controller_utility.dart';
-import '../../../shared_widgets/item_sizes.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:framework/shared_widgets/base_template/widgets/card_button_v1.dart';
+import 'package:framework/shared_widgets/form_components/form_controller_utility.dart';
+import 'package:framework/shared_widgets/item_sizes.dart';
+import 'package:uni_credit/theme/theme_colors.dart';
+import 'package:uni_credit/views/login_page/bloc/login_form_bloc.dart';
+import 'package:uni_credit/views/login_page/bloc/login_form_events.dart';
+import 'package:uni_credit/views/login_page/bloc/login_form_states.dart';
 
 class LoginConfirmButton extends StatelessWidget {
   final FormValidatorUtility formUtility;
-  final Function() onLogin;
-  const LoginConfirmButton(
-      {Key? key, required this.formUtility, required this.onLogin})
+
+
+  const LoginConfirmButton({Key? key, required this.formUtility,})
       : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    return CardButtonV1(
-      title: CardTextContent(content: 'Login'),
-      leadingIcon: CardIconData(icon: Icon(Icons.person)),
-      width: CardDimension(nulify: true),
-      cardIntention: CardIntention.action,
-      trailingIcon: CardIconData(),
-      pressEnabled:
-      formUtility.formController.getValidationState(emptyDefault: false),
-      onPress: onLogin,
-    );
+    return BlocBuilder<LoginFormBloc, LoginFormState>(
+      builder: (context, state) {
+
+        LoginFormBloc bloc = context.read<LoginFormBloc>();
+
+        bool canPressButton =
+            [LoginFailure, LoginLoading].contains(state.runtimeType)
+                == false
+                &&
+                bloc.loginIsValid();
+
+        return CardButtonV1(
+            title: CardTextContent(content: Text(
+              'Login', style: TextStyle(
+                color:
+                formUtility.formController.getValidationState(
+                    emptyDefault: false) ?
+                Colors.white : Colors.black
+            ),
+            )),
+            // leadingIcon: CardIconData(icon: Icon(Icons.person)),
+            width: CardDimension(itemSize: ItemSize.minimal),
+            cardIntention: CardIntention.action,
+            //trailingIcon: CardIconData(),
+            pressEnabled: canPressButton,
+            onPress: (){
+              context.read<LoginFormBloc>().add(LoginFormSubmitted());
+            },
+            backgroundColor: ThemeColors.getActionColor()
+        );
+      },
+    )  ;
   }
 }
 

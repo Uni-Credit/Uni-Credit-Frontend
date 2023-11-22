@@ -4,7 +4,7 @@
 
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:uni_credit/shared_widgets/widgets/title.dart';
+import 'package:framework/shared_widgets/widgets/title.dart';
 import 'package:uni_credit/theme/theme_colors.dart';
 
 class AtualizationCard extends StatelessWidget {

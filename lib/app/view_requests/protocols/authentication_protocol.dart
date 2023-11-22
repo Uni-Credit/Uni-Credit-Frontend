@@ -1,11 +1,11 @@
 import 'package:auto_route/auto_route.dart';
 import 'package:dio/dio.dart';
 import 'package:flutter/cupertino.dart';
-import '../../../models/session.dart';
-import '../../../requests/backend_response.dart';
-import '../../../requests/caller/arguments/free_form_argument_caller.dart';
-import '../../../requests/request_process.dart';
-import '../../../shared_widgets/form_components/validation_form_controller.dart';
+import 'package:framework/requests/backend_response.dart';
+import 'package:framework/requests/caller/arguments/free_form_argument_caller.dart';
+import 'package:framework/requests/request_process.dart';
+import 'package:framework/shared_widgets/form_components/validation_form_controller.dart';
+import '../../../session.dart';
 import '../requests/login_request.dart';
 
 
@@ -64,6 +64,6 @@ class AuthenticationProtocol {
     debugPrint(response.data.runtimeType.toString());
     debugPrint(response.data.toString());
 
-    Session.setInfo(response.data);
+    //Session.setInfo(response.data);
   }
 }

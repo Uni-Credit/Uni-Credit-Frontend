@@ -1,8 +1,14 @@
 
 
+import 'dart:math';
+
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:framework/models/extensions/for_build_context.dart';
+import 'package:framework/shared_widgets/card_button/icon_action_card_button.dart';
+import 'package:uni_credit/routes/router.gr.dart';
 import 'package:uni_credit/theme/theme_colors.dart';
+import 'package:uni_credit/views/make_transaction_page/make_transaction_page.dart';
 
 import '../../../models/system/credit.dart';
 
@@ -22,26 +28,93 @@ class CreditView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
 
+    double cardHeight = 110;
 
+    double cardTotalSize = min(280 + 80, context.width);
+
+    double proportion = 0.74;
     if(viewMode == CreditViewMode.manyCredits) {
-      return Container(
+      return Row(
+     //   mainAxisSize: MainAxisSize.min,
+        children: [
+          Expanded(
+            flex: 3,
+            child: Container(
 
-        width: 210,
-        height: 110,
-        decoration: BoxDecoration(
-            color: ThemeColors.getSpecialColor(),
-          borderRadius: BorderRadius.all(Radius.circular(12))
-        ),
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-          children: [
-            Text(credit.name),
-            Text(credit.value.toString(),
-            style: TextStyle(color: ThemeColors.getDark(), fontWeight: FontWeight.bold,
-            fontSize: 20
-            ),),
-          ],
-        ),
+              height: cardHeight,
+              decoration: BoxDecoration(
+                  color: cardColor(),
+                borderRadius: BorderRadius.only(
+                  topLeft: Radius.circular(radiusValue()),
+                  bottomLeft: Radius.circular(radiusValue()),
+
+                ),
+              ),
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                children: [
+                  Text(credit.name,
+                  style: TextStyle(
+                    fontSize: 20
+                  ),),
+                  Text(credit.value.toString(),
+                  style: TextStyle(  fontWeight: FontWeight.bold,
+                  fontSize: 28
+                  ),),
+                ],
+              ),
+            ),
+          ),
+
+          Padding(padding: EdgeInsets.only(left: 4)),
+
+          Expanded(
+            flex: 1,
+            child: Container(
+              height: cardHeight,
+              decoration: BoxDecoration(
+                borderRadius: BorderRadius.only(
+                  topRight: Radius.circular(radiusValue()),
+                  bottomRight: Radius.circular(radiusValue()),
+
+                ),
+
+                color: cardColor(),
+              ),
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  IconActionCardButton(
+                    backgroundColor: ThemeColors.getActionColor(),
+                    content: 'Transação',
+                      icon: Icon(Icons.credit_card),
+                  onPress: (){
+                    Transaction(
+                      construction: MakeTransactionConstruction(
+                        credit: credit
+                      )
+                    ).push(context);
+                  },
+                  ),
+                  Container(
+                    height: 6,
+                  ),
+                  IconActionCardButton(
+                    backgroundColor: ThemeColors.getActionColor(),
+
+                    content: 'Anúncios',
+                      icon: Icon(Icons.email),
+                    onPress: (){
+                      AnnouncementRoute().push(context);
+                    },
+                  ),
+
+                ],
+              ),
+            ),
+          )
+
+        ],
       );
     }
 
@@ -58,4 +131,10 @@ class CreditView extends StatelessWidget {
       ),
     );
   }
+
+  BorderRadius getBorderRadius() => BorderRadius.all(Radius.circular(radiusValue()));
+
+  double radiusValue() => 12;
+
+  cardColor() => ThemeColors.cardColor();
 }

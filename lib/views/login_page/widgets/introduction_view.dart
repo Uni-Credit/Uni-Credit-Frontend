@@ -2,13 +2,11 @@
 
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:framework/shared_widgets/base_template/widgets/card_button_v1.dart';
+import 'package:framework/shared_widgets/graphical_item/app_logo.dart';
+import 'package:framework/shared_widgets/item_sizes.dart';
 import 'package:introduction_screen/introduction_screen.dart';
-import 'package:uni_credit/shared_widgets/base_template/widgets/card_button_v1.dart';
-import 'package:uni_credit/shared_widgets/card_button/icon_action_card_button.dart';
-import 'package:uni_credit/shared_widgets/item_sizes.dart';
-import 'package:uni_credit/shared_widgets/popups/template_popup.dart';
 import 'package:uni_credit/theme/theme_colors.dart';
-import 'package:uni_credit/views/login_page/widgets/app_logo.dart';
 
 class IntroductionView extends StatelessWidget {
   final Function() onDone;
@@ -38,7 +36,7 @@ class IntroductionView extends StatelessWidget {
           Text("Pague antecipadamente!"),
         ],
       ),
-        image:  Icon(Icons.money_outlined),
+        image:  Icon(Icons.money_outlined, color: Colors.white,),
     ),PageViewModel(
       title: "Poupe seu tempo!",
       bodyWidget: Column(
@@ -49,7 +47,7 @@ class IntroductionView extends StatelessWidget {
           Text('Faça seu login com o Sistema da FURG!')
         ],
       ),
-        image:  Icon(Icons.access_alarms_rounded),
+        image:  Icon(Icons.access_alarms_rounded,color: Colors.white,),
     ),
     ];
 

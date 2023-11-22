@@ -4,9 +4,9 @@
 
 import 'package:auto_route/annotations.dart';
 import 'package:flutter/cupertino.dart';
-import 'package:uni_credit/shared_widgets/base_template/go_back_button.dart';
-import 'package:uni_credit/shared_widgets/base_template/template_scaffold.dart';
-import 'package:uni_credit/views/make_transaction_page/make_transaction_body.dart';
+import 'package:framework/shared_widgets/base_template/template_scaffold.dart';
+import 'package:uni_credit/views/historic_page/historic_body.dart';
+
 
 
 @RoutePage(name: 'historic')
@@ -17,8 +17,11 @@ class HistoricPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return TemplateScaffold(
         navbarConfig: NavbarConfiguration(
-          navbar: GoBackButton()
+          usesDefaultNavbar: false,
         ),
-        body: MakeTransactionBody());
+
+        appbarConfig: AppbarConfiguration.withTitle(title: 'Histórico'),
+
+        body: HistoricBody());
   }
 }

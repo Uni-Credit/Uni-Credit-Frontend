@@ -2,8 +2,7 @@
 
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:uni_credit/models/extensions/for_build_context.dart';
-import 'package:uni_credit/shared_widgets/base_template/widgets/card_button_v1.dart';
+import 'package:framework/models/extensions/for_build_context.dart';
 import 'package:uni_credit/theme/theme_colors.dart';
 import 'package:uni_credit/views/dashboard_page/atualizations_widget.dart';
 import 'package:uni_credit/views/dashboard_page/widgets/dashboard_buttons.dart';
@@ -23,7 +22,9 @@ class _DefaultFooterState extends State<DefaultFooter> {
     return Container(
       color: Colors.black,
       child: Column(
-        children: [  Padding(
+        children: [
+
+          /*Padding(
           padding: const EdgeInsets.only(bottom: 8*0 ),
           child: CardButtonV1(title: CardTextContent(content:
           Icon(multiplier == 1 ? Icons.keyboard_arrow_down :
@@ -40,7 +41,7 @@ class _DefaultFooterState extends State<DefaultFooter> {
             },
             width: CardDimension(size: context.width),
           ),
-        ),
+        ),*/
           Visibility(
             visible: multiplier != 0,
             child: Container(

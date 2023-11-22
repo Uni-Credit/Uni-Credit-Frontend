@@ -7,15 +7,10 @@
 import 'package:auto_route/annotations.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:framework/shared_widgets/base_template/template_scaffold.dart';
 import 'package:uni_credit/default_footer.dart';
-import 'package:uni_credit/models/extensions/for_build_context.dart';
 import 'package:uni_credit/models/system/user_information.dart';
-import 'package:uni_credit/shared_widgets/base_template/template_scaffold.dart';
-import 'package:uni_credit/shared_widgets/base_template/widgets/card_button_v1.dart';
-import 'package:uni_credit/shared_widgets/item_sizes.dart';
-import 'package:uni_credit/theme/theme_colors.dart';
 import 'package:uni_credit/views/dashboard_page/dashboard_body.dart';
-import 'package:uni_credit/views/dashboard_page/widgets/dashboard_buttons.dart';
 
 import '../../models/system/credit.dart';
 
@@ -46,13 +41,15 @@ class _DashboardPageState extends State<DashboardPage> {
   @override
   Widget build(BuildContext context) {
     return TemplateScaffold(
-      footer: [
+      /**/footer: [
         DefaultFooter()
       ],
+      backgroundColor: Color(0xff212020),
       useDefaultPadding: false,
-        navbarConfig: NavbarConfiguration(ignoreNavbarPadding: true,),
+        navbarConfig: NavbarConfiguration.empty(),
+        //appbarConfig: AppbarConfiguration.empty(),
          appbarConfig: AppbarConfiguration(
-           height: 80,
+           height: 80, //ignorePadding: true,
          content: DashboardAppbar()),
          body: DashboardBody(
            construction: construction

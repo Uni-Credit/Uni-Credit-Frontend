@@ -2,7 +2,8 @@
 
 
 import 'package:flutter/cupertino.dart';
-import 'package:uni_credit/shared_widgets/base_template/widgets/card_button_v1.dart';
+import 'package:uni_credit/models/system/transaction_model.dart';
+import 'package:uni_credit/views/historic_page/widgets/historic_item.dart';
 
 class HistoricBody extends StatelessWidget {
   const HistoricBody({super.key});
@@ -11,9 +12,24 @@ class HistoricBody extends StatelessWidget {
   Widget build(BuildContext context) {
     return Column(
       children: [
-        
-        CardButtonV1(title: CardTextContent(content: 'Confirmar'))
-      ],
+
+        for(TransactionModel transaction in [
+          TransactionModel(name: 'RU 1',
+              dateTime: DateTime(
+                2023, 06, 06, 12, 32
+              ), transactionValue: 3),
+          TransactionModel(name: 'RU 2',
+              dateTime: DateTime(
+                2023, 06, 05, 13, 32
+              ), transactionValue: 3),
+
+        ])
+          Padding(
+            padding: const EdgeInsets.only(top: 12.0),
+            child: HistoricItem(transactionModel: transaction),
+          )
+
+ ]
     );
   }
 }

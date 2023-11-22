@@ -4,7 +4,8 @@
 
 import 'package:auto_route/annotations.dart';
 import 'package:flutter/cupertino.dart';
-import 'package:uni_credit/shared_widgets/base_template/template_scaffold.dart';
+import 'package:framework/shared_widgets/base_template/template_scaffold.dart';
+
 
 import 'configuration_body.dart';
 

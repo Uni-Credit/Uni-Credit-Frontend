@@ -19,9 +19,15 @@ class LastTransactionCard extends StatelessWidget {
             Text('Ultima Transação'),
             Column(
               children: [
-                Text('CC - 12,40'),
+                Padding(
+                  padding: const EdgeInsets.only(top: 6.0),
+                  child: Text('CC - 12,40'),
+                ),
                 Spacer(),
-                Text('Há 12 horas'),
+                Padding(
+                  padding: const EdgeInsets.only(bottom: 6.0),
+                  child: Text('Há 12 horas'),
+                ),
               ],
             )
           ],

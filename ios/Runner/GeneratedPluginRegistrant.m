@@ -18,10 +18,22 @@
 @import firebase_core;
 #endif
 
+#if __has_include(<flutter_blue_plus/FlutterBluePlusPlugin.h>)
+#import <flutter_blue_plus/FlutterBluePlusPlugin.h>
+#else
+@import flutter_blue_plus;
+#endif
+
 #if __has_include(<flutter_keyboard_visibility/FlutterKeyboardVisibilityPlugin.h>)
 #import <flutter_keyboard_visibility/FlutterKeyboardVisibilityPlugin.h>
 #else
 @import flutter_keyboard_visibility;
+#endif
+
+#if __has_include(<google_sign_in_ios/FLTGoogleSignInPlugin.h>)
+#import <google_sign_in_ios/FLTGoogleSignInPlugin.h>
+#else
+@import google_sign_in_ios;
 #endif
 
 #if __has_include(<shared_preferences_foundation/SharedPreferencesPlugin.h>)
@@ -30,13 +42,22 @@
 @import shared_preferences_foundation;
 #endif
 
+#if __has_include(<url_launcher_ios/FLTURLLauncherPlugin.h>)
+#import <url_launcher_ios/FLTURLLauncherPlugin.h>
+#else
+@import url_launcher_ios;
+#endif
+
 @implementation GeneratedPluginRegistrant
 
 + (void)registerWithRegistry:(NSObject<FlutterPluginRegistry>*)registry {
   [FilePickerPlugin registerWithRegistrar:[registry registrarForPlugin:@"FilePickerPlugin"]];
   [FLTFirebaseCorePlugin registerWithRegistrar:[registry registrarForPlugin:@"FLTFirebaseCorePlugin"]];
+  [FlutterBluePlusPlugin registerWithRegistrar:[registry registrarForPlugin:@"FlutterBluePlusPlugin"]];
   [FlutterKeyboardVisibilityPlugin registerWithRegistrar:[registry registrarForPlugin:@"FlutterKeyboardVisibilityPlugin"]];
+  [FLTGoogleSignInPlugin registerWithRegistrar:[registry registrarForPlugin:@"FLTGoogleSignInPlugin"]];
   [SharedPreferencesPlugin registerWithRegistrar:[registry registrarForPlugin:@"SharedPreferencesPlugin"]];
+  [FLTURLLauncherPlugin registerWithRegistrar:[registry registrarForPlugin:@"FLTURLLauncherPlugin"]];
 }
 
 @end
