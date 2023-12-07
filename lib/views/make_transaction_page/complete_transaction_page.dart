@@ -6,9 +6,10 @@
 import 'package:auto_route/annotations.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:framework/shared_widgets/base_template/template_scaffold.dart';
-import 'package:framework/shared_widgets/base_template/widgets/card_button_v1.dart';
-import 'package:framework/shared_widgets/widgets/title.dart';
+import 'package:flexible_structures/widgets/base_templates/template_scaffold.dart';
+import 'package:flexible_structures/widgets/base_templates/buttons/card_button_v1.dart';
+import 'package:uni_credit/shared_widgets/title_widget.dart';
+
 import 'package:uni_credit/theme/theme_colors.dart';
 
 

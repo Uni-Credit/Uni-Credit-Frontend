@@ -3,10 +3,10 @@
 
 import 'dart:math';
 
+import 'package:flexible_structures/widgets/display/date_display.dart';
 import 'package:flutter/material.dart';
-import 'package:framework/models/extensions/for_build_context.dart';
-import 'package:framework/shared_widgets/base_template/widgets/card_button_v1.dart';
-import 'package:framework/shared_widgets/displays/date_display.dart';
+import 'package:common_extensions/extensions/ui/for_build_context.dart';
+import 'package:flexible_structures/widgets/base_templates/buttons/card_button_v1.dart';
 import 'package:uni_credit/theme/theme_colors.dart';
 
 import '../../../models/system/transaction_model.dart';

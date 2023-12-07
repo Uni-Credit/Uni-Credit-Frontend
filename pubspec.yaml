@@ -26,12 +26,22 @@ dependencies:
   introduction_screen: ^3.1.9
   timelineview: ^1.0.2
 
-  framework:
-    path: ../../framework
-  authentication:
-    path: ../../flutter_generic_routes/authentication
-  dev_presenting:
-    path: ../../flutter_generic_routes/dev_presenting
+  request_states:
+    path: ../../itec_integrated_flutter/request_states
+
+  flexible_structures:
+    path: ../../itec_integrated_flutter/flexible_structures
+
+  common_extensions:
+    path: ../../itec_integrated_flutter/common_extensions
+
+  form_components:
+    path: ../../form_components
+
+  #authentication:
+  #  path: ../../flutter_generic_routes/authentication
+  #dev_presenting:
+  #  path: ../../flutter_generic_routes/dev_presenting
   #flutter_localization: any
 
 dev_dependencies:

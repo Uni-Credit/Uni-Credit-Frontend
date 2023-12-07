@@ -1,7 +1,7 @@
 
 
 import 'package:flutter/cupertino.dart';
-import 'package:framework/shared_widgets/widgets/title.dart';
+import 'package:uni_credit/shared_widgets/title_widget.dart';
 import 'package:uni_credit/views/dashboard_page/atualization_card.dart';
 
 class AtualizationsWidget extends StatelessWidget {

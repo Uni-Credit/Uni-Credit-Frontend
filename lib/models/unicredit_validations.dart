@@ -1,7 +1,6 @@
 
 
 
-import 'package:framework/shared_widgets/form_components/validations.dart';
 
 class UniCreditValidations {
 

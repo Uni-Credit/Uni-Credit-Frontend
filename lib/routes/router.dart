@@ -1,7 +1,6 @@
 
 
 
-import 'package:authentication/routes/router.dart';
 import 'package:auto_route/annotations.dart';
 import 'package:auto_route/auto_route.dart';
 import 'package:uni_credit/routes/router.gr.dart';
@@ -36,7 +35,7 @@ class AppRouter extends $AppRouter {
 
     AutoRoute(page: PageInfo(Register.name)),
  AutoRoute(page: PageInfo(LoginUser.name), initial: true ),
-    AutoRoute(page: PageInfo(AboutRoute.name), ),
+    //AutoRoute(page: PageInfo(AboutRoute.name), ),
 
 /*  ...UniCreditAuthenticationAppRouter().routes,*/
     AutoRoute(page: PageInfo(Dashboard.name)),

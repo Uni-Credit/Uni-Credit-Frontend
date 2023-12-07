@@ -2,13 +2,18 @@
 
 
 import 'package:auto_route/auto_route.dart';
+import 'package:common_extensions/extensions/ui/for_build_context.dart';
+import 'package:flexible_structures/widgets/base_templates/buttons/card_button_v1.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:framework/models/extensions/for_build_context.dart';
-import 'package:framework/shared_widgets/base_template/widgets/card_button_v1.dart';
-import 'package:framework/shared_widgets/form_components/form_controller_utility.dart';
-import 'package:framework/shared_widgets/form_components/linked_text_input.dart';
-import 'package:framework/shared_widgets/form_components/validation_form_controller.dart';
+import 'package:form_components/form_components/form_controller_utility.dart';
+
+import 'package:form_components/form_components/validation_form_controller.dart';
+import 'package:common_extensions/extensions/ui/for_build_context.dart';
+import 'package:flexible_structures/widgets/base_templates/buttons/card_button_v1.dart';
+import 'package:form_components/form_components/form_controller_utility.dart';
+import 'package:form_components/form_components/linked_text_input.dart';
+import 'package:form_components/form_components/validation_form_controller.dart';
 import 'package:uni_credit/routes/router.gr.dart';
 import 'package:uni_credit/theme/theme_colors.dart';
 

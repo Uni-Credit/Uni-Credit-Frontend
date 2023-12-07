@@ -2,7 +2,7 @@
 
 
 // States
-import 'package:framework/requests/request_process.dart';
+import 'package:request_states/process/request_process.dart';
 
 abstract class LoginFormState implements RequestStatusProvider {
   @override

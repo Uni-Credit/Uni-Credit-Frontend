@@ -4,9 +4,9 @@
 import 'package:auto_route/auto_route.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:framework/models/extensions/for_build_context.dart';
-import 'package:framework/shared_widgets/card_button/icon_action_card_button.dart';
-import 'package:framework/shared_widgets/widgets/title.dart';
+import 'package:common_extensions/extensions/ui/for_build_context.dart';
+import 'package:flexible_structures/widgets/base_templates/buttons/icon_action_card_button.dart';
+import 'package:uni_credit/shared_widgets/title_widget.dart';
 import 'package:uni_credit/views/dashboard_page/dashboard_page.dart';
 import 'package:uni_credit/views/dashboard_page/widgets/credits_view.dart';
 import 'package:uni_credit/views/dashboard_page/widgets/last_transaction_card.dart';

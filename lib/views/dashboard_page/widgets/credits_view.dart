@@ -4,8 +4,8 @@ import 'dart:math';
 
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:framework/models/extensions/for_build_context.dart';
-import 'package:framework/shared_widgets/card_button/icon_action_card_button.dart';
+import 'package:common_extensions/extensions/ui/for_build_context.dart';
+import 'package:flexible_structures/widgets/base_templates/buttons/icon_action_card_button.dart';
 import 'package:uni_credit/routes/router.gr.dart';
 import 'package:uni_credit/theme/theme_colors.dart';
 import 'package:uni_credit/views/make_transaction_page/make_transaction_page.dart';

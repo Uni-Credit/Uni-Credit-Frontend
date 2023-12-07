@@ -7,7 +7,7 @@
 import 'package:auto_route/annotations.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:framework/shared_widgets/base_template/template_scaffold.dart';
+import 'package:flexible_structures/widgets/base_templates/template_scaffold.dart';
 import 'package:uni_credit/default_footer.dart';
 import 'package:uni_credit/models/system/user_information.dart';
 import 'package:uni_credit/views/dashboard_page/dashboard_body.dart';

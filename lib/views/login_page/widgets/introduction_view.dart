@@ -1,10 +1,11 @@
 
 
+import 'package:flexible_structures/widgets/graphical_item/app_logo.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:framework/shared_widgets/base_template/widgets/card_button_v1.dart';
-import 'package:framework/shared_widgets/graphical_item/app_logo.dart';
-import 'package:framework/shared_widgets/item_sizes.dart';
+import 'package:flexible_structures/widgets/base_templates/buttons/card_button_v1.dart';
+
+import 'package:flexible_structures/widgets/responsive/item_sizes.dart';
 import 'package:introduction_screen/introduction_screen.dart';
 import 'package:uni_credit/theme/theme_colors.dart';
 

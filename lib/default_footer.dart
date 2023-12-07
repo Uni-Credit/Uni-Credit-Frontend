@@ -1,8 +1,8 @@
 
 
+import 'package:common_extensions/extensions/ui/for_build_context.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:framework/models/extensions/for_build_context.dart';
 import 'package:uni_credit/theme/theme_colors.dart';
 import 'package:uni_credit/views/dashboard_page/atualizations_widget.dart';
 import 'package:uni_credit/views/dashboard_page/widgets/dashboard_buttons.dart';

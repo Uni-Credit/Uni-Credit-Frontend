@@ -3,24 +3,24 @@
 
 
 import 'package:auto_route/auto_route.dart';
+import 'package:common_extensions/extensions/ui/for_widget.dart';
+import 'package:flexible_structures/responsive/media_queries.dart';
+import 'package:flexible_structures/widgets/base_templates/buttons/card_button_v1.dart';
+import 'package:flexible_structures/widgets/responsive/item_sizes.dart';
 import 'package:flutter/cupertino.dart';
-import 'package:framework/models/enums/http_method.dart';
-import 'package:framework/models/extensions/for_widget.dart';
-import 'package:framework/requests/app_dio.dart';
-import 'package:framework/requests/backend_request.dart';
-import 'package:framework/requests/caller/response_request_caller.dart';
-import 'package:framework/requests/request_process.dart';
-import 'package:framework/shared_widgets/base_template/widgets/card_button_v1.dart';
-import 'package:framework/shared_widgets/form_components/form_controller_utility.dart';
-import 'package:framework/shared_widgets/form_components/linked_text_input.dart';
-import 'package:framework/shared_widgets/form_components/password_input.dart';
-import 'package:framework/shared_widgets/form_components/validation_form_controller.dart';
-import 'package:framework/shared_widgets/form_components/validations.dart';
-import 'package:framework/shared_widgets/item_sizes.dart';
-import 'package:framework/shared_widgets/popups/response_popup.dart';
-import 'package:framework/shared_widgets/responsive/media_queries.dart';
-import 'package:framework/shared_widgets/widgets/title.dart';
-import 'package:uni_credit/views/login_page/data/models/user_credentials.dart';
+import 'package:form_components/form_components/form_controller_utility.dart';
+import 'package:form_components/form_components/linked_text_input.dart';
+import 'package:form_components/form_components/password_input.dart';
+import 'package:form_components/form_components/validation_form_controller.dart';
+import 'package:form_components/form_components/validations.dart';
+import 'package:request_states/main/app_dio.dart';
+import 'package:request_states/process/request_process.dart';
+import 'package:request_states/requests/backend_request.dart';
+import 'package:request_states/requests/caller/response_request_caller.dart';
+import 'package:request_states/widgets/popups/response_popup.dart';
+
+import '../../shared_widgets/title_widget.dart';
+
 
 class RegisterBody extends StatelessWidget {
   final FormValidationController formController;

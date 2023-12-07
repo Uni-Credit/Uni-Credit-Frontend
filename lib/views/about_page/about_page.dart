@@ -1,6 +1,6 @@
 
 
-
+/*
 
 import 'package:auto_route/annotations.dart';
 import 'package:dev_presenting/views/about/roulette_members_view.dart';
@@ -13,14 +13,14 @@ import 'package:dev_presenting/views/app_flow/getter_flow.dart';
 import 'package:dev_presenting/views/app_flow/list_app_flow.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:framework/models/extensions/for_build_context.dart';
+import 'package:common_extensions/extensions/ui/for_build_context.dart';
 import 'package:framework/shared_widgets/base_template/go_back_button.dart';
-import 'package:framework/shared_widgets/base_template/template_scaffold.dart';
+import 'package:flexible_structures/widgets/base_templates/template_scaffold.dart';
 import 'package:framework/shared_widgets/graphical_item/app_logo.dart';
-import 'package:framework/shared_widgets/item_sizes.dart';
+import 'package:flexible_structures/widgets/responsive/item_sizes.dart';
 import 'package:framework/shared_widgets/listing/multi_child_scroll_view.dart';
 import 'package:framework/shared_widgets/widgets/highlighted_text.dart';
-import 'package:framework/shared_widgets/widgets/title.dart';
+import 'package:uni_credit/shared_widgets/title_widget.dart';
 import 'package:timelineview/timelineview.dart';
 import 'package:uni_credit/shared_widgets/furg_logo.dart';
 import 'package:uni_credit/theme/theme_colors.dart';
@@ -334,4 +334,4 @@ class AboutProject extends StatelessWidget {
       ],
     );
   }
-}
+}*/

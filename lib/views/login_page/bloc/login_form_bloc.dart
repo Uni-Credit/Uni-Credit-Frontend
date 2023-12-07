@@ -1,8 +1,8 @@
 import 'dart:async';
 
 import 'package:bloc/bloc.dart';
-import 'package:framework/models/bloc/listenable_bloc.dart';
 import 'package:get_it/get_it.dart';
+import 'package:request_states/requests/state_response.dart';
 import '../../../models/singletons/user_session/session_saver.dart';
 import '../data/interactors/login_interactor.dart';
 import '../data/models/user_credentials.dart';
@@ -12,7 +12,7 @@ import 'login_form_states.dart';
 // Events
 
 // Bussness Logic Component
-class LoginFormBloc extends ListenableBloc<LoginFormEvent, LoginFormState> {
+class LoginFormBloc extends Bloc<LoginFormEvent, LoginFormState> {
 
 
   LoginFormInteractor loginFormInteractor;
@@ -68,27 +68,14 @@ class LoginFormBloc extends ListenableBloc<LoginFormEvent, LoginFormState> {
       return;
     }
 
-    UserCredentials userCredentials = UserCredentials.fromJson(_formData!);
+    UserCredentials userCredentials = UserCredentials.fromJson(
+        _formData!);
 
     final backendResponse = await loginFormInteractor
         .loginUserCredentials(userCredentials);
 
-    // backend success -> state login success
-    // backend failure -> state login failure
-
-
-
     if(backendResponse.positiveStatus == false) {
-      String error = backendResponse.message;
-
-      if(error.isEmpty) {
-        error = 'Erro desconhecido';
-      }
-
-      emit(
-          backendResponse.isSystemFailure ?
-          LoginBackendFailure(error: error + " no sistema") :
-          LoginFailure(error: error  ) );
+      receiveRequestError(backendResponse, emit);
       return;
     }
 
@@ -97,17 +84,26 @@ class LoginFormBloc extends ListenableBloc<LoginFormEvent, LoginFormState> {
 
     if(!sessionDataIsCorrect) {
       emit(LoginBackendFailure(error: 'Dados de sessão não foram recebidos '
-          'corretamente',
-        resultReceived: backendResponse.data,
+          'corretamente', resultReceived: backendResponse.data,
       ));
       return;
     }
 
-    LoginFormState state =
-    LoginSuccess(userData: backendResponse.data)
-    ;
+    LoginFormState state = LoginSuccess(userData: backendResponse.data);
 
     emit(state);
+  }
+
+  void receiveRequestError(StateResponse backendResponse, Emitter<LoginFormState> emit) {
+    String error = backendResponse.message;
+
+    if(error.isEmpty) {
+      error = 'Erro desconhecido';
+    }
+
+    emit(backendResponse.isSystemFailure ?
+        LoginBackendFailure(error: error + " no sistema") :
+        LoginFailure(error: error  ) );
   }
 
 

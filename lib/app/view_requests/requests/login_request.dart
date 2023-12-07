@@ -1,10 +1,9 @@
 import 'dart:convert';
 import 'package:dio/dio.dart';
-import 'package:framework/models/enums/http_method.dart';
-import 'package:framework/requests/app_dio.dart';
-import 'package:framework/requests/backend_request.dart';
-import 'package:framework/requests/caller/arguments/free_form_argument_caller.dart';
-import 'package:framework/requests/caller/response_request_caller.dart';
+import 'package:request_states/main/app_dio.dart';
+import 'package:request_states/requests/backend_request.dart';
+import 'package:request_states/requests/caller/arguments/free_form_argument_caller.dart';
+import 'package:request_states/requests/caller/response_request_caller.dart';
 import '../request_paths.dart';
 
 

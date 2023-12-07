@@ -3,10 +3,10 @@
 
 
 import 'package:auto_route/annotations.dart';
+import 'package:flexible_structures/widgets/base_templates/go_back_button.dart';
+import 'package:flexible_structures/widgets/base_templates/template_scaffold.dart';
 import 'package:flutter/cupertino.dart';
-import 'package:framework/shared_widgets/base_template/go_back_button.dart';
-import 'package:framework/shared_widgets/base_template/template_scaffold.dart';
-import 'package:framework/shared_widgets/form_components/validation_form_controller.dart';
+import 'package:form_components/form_components/validation_form_controller.dart';
 import 'package:uni_credit/views/register_page/register_body.dart';
 
 

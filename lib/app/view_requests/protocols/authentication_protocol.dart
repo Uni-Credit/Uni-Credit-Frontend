@@ -1,11 +1,11 @@
 import 'package:auto_route/auto_route.dart';
 import 'package:dio/dio.dart';
 import 'package:flutter/cupertino.dart';
-import 'package:framework/requests/backend_response.dart';
-import 'package:framework/requests/caller/arguments/free_form_argument_caller.dart';
-import 'package:framework/requests/request_process.dart';
-import 'package:framework/shared_widgets/form_components/validation_form_controller.dart';
-import '../../../session.dart';
+import 'package:form_components/form_components/validation_form_controller.dart';
+import 'package:request_states/process/request_process.dart';
+import 'package:request_states/requests/caller/arguments/free_form_argument_caller.dart';
+import 'package:request_states/requests/state_response.dart';
+
 import '../requests/login_request.dart';
 
 
@@ -14,11 +14,11 @@ class AuthenticationProtocol {
   // Call with formController to have an error message in the email field
   static attemptLogin(
       {required FreeFormArgumentCaller arguments,
-        required RequestStatusActionMapper<BackendResponse>? actionMapper,
+        required RequestStatusActionMapper<StateResponse>? actionMapper,
         required FormValidationController? formControllerForErrorDisplay,
         required String emailKey,
         BuildContext? contextForSuccessNavigation}) async {
-    BackendResponse response =
+    StateResponse<Map<String, dynamic>> response =
     await LoginRequests.attemptLogin(argument: arguments);
 
     debugPrint(response.statusCode.toString());
@@ -45,7 +45,7 @@ class AuthenticationProtocol {
     actionMapper?.mapAction(status: RequestStatus.error, data: response);
   }
 
-  static void _displayLoginError(BackendResponse response,
+  static void _displayLoginError(StateResponse<Map<String, dynamic>> response,
 
       FormValidationController? formControllerForErrorDisplay,
       String emailKey) {
@@ -59,7 +59,7 @@ class AuthenticationProtocol {
         ?.mapResponseErrors({emailKey: message});
   }
 
-  static void _saveLoginIntoSession(BackendResponse response, RequestStatusActionMapper<BackendResponse>? actionMapper) {
+  static void _saveLoginIntoSession(StateResponse response, RequestStatusActionMapper<StateResponse>? actionMapper) {
     debugPrint("success status");
     debugPrint(response.data.runtimeType.toString());
     debugPrint(response.data.toString());

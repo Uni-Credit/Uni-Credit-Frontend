@@ -1,13 +1,13 @@
 
 
 
-
+/*
 
 import 'package:authentication/views/register_page/register_actions_controller.dart';
 import 'package:authentication/views/register_page/register_page_meta.dart';
 import 'package:flutter/src/widgets/framework.dart';
-import 'package:framework/requests/backend_response.dart';
-import 'package:framework/requests/caller/arguments/free_form_argument_caller.dart';
+import 'package:request_states/requests/state_response.dart';
+import 'package:request_states/caller/arguments/free_form_argument_caller.dart';
 
 class UniCreditRegisterMeta extends RegisterPageMeta {
   const UniCreditRegisterMeta();
@@ -34,14 +34,14 @@ class UniCreditRegisterResources extends RegisterResources {
   }
 
   @override
-  Future<BackendResponse> getAddressInformation(String cep) async {
-    return BackendResponse.success();
+  Future<StateResponse> getAddressInformation(String cep) async {
+    return StateResponse.success();
   }
 
   @override
-  Future<BackendResponse> onRegister(FreeFormArgumentCaller argumentCaller) {
+  Future<StateResponse> onRegister(FreeFormArgumentCaller argumentCaller) {
     // TODO: implement onRegister
     throw UnimplementedError();
   }
 
-}
+}*/

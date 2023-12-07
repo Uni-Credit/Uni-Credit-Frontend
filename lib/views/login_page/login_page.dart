@@ -2,9 +2,8 @@
 import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:framework/shared_widgets/base_template/template_scaffold.dart';
-import 'package:framework/shared_widgets/widgets/highlighted_text.dart';
-import 'package:uni_credit/routes/router.gr.dart';
+import 'package:flexible_structures/widgets/base_templates/template_scaffold.dart';
+
 
 import 'package:uni_credit/theme/theme_colors.dart';
 import 'package:uni_credit/views/login_page/bloc/login_form_bloc.dart';
@@ -87,14 +86,14 @@ class _LoginPageState extends State<LoginPage> {
         Row(
 
           children: [
-            Padding(
+            /*Padding(
               padding: const EdgeInsets.all(16.0),
               child: HighlightedText(
-                  highlightTextStyle: HighlightTextStyle.subtleLink,
+                highlightType: HighlightType.subtle,
                   onPressed: () {
                     context.router.push(AboutRoute());
                   }, display: 'Sobre'),
-            ),
+            ),*/
           ],
         )
       ],
