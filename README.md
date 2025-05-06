@@ -1,7 +1,7 @@
 
 # UniCredit
 
-Prototype App for digital transactions in university; 
+Prototype App for digital transactions in university; [Click here to test it](https://unicreditfrontend.web.app/#/)
 Contains: login screen, dashboard, and a transaction historic.
 Communicates with [backend API](https://github.com/Uni-Credit/Backend/tree/main).
 
